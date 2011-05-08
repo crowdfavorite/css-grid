@@ -1,0 +1,98 @@
+/*	CSSGrid
+ *  https://github.com/crowdfavorite/css-grid
+ *	License: http://opensource.org/licenses/mit-license.php  */
+
+.grid {
+	margin: 0 auto;
+	padding: 15px;
+	width: 966px;
+}
+
+.row {
+	clear: left;
+}
+
+.c6-1,.c6-2,.c6-3,.c6-4,.c6-5,.c6-6,
+.c4-1,.c4-2,.c4-3,.c4-4,
+.c6-12,.c6-123,.c6-1234,.c6-12345,.c6-123456,
+.c6-23,.c6-234,.c6-2345,.c6-23456,
+.c6-34,.c6-345,.c6-3456,
+.c6-45,.c6-456,
+.c6-56,
+.c4-12,.c4-123,.c4-1234,
+.c4-23,.c4-234,
+.c4-34 {
+	_display: inline; /* IE6 */
+	float: left;
+	margin-left: 30px;
+}
+
+/* Sixths */
+.c6-1,.c6-2,.c6-3,.c6-4,.c6-5,.c6-6 {
+	width: 136px;
+}
+
+/* Thirds */
+.c6-12,.c6-23,.c6-34,.c6-45,.c6-56 {
+	width: 302px;
+}
+
+/* Two-Thirds */
+.c6-1234,.c6-2345,.c6-3456 {
+	width: 634px;
+}
+
+/* Five-Sixths */
+.c6-12345,.c6-23456 {
+	width: 800px;
+}
+
+/* Quarters */
+.c4-1,.c4-2,.c4-3,.c4-4 {
+	width: 219px;
+}
+
+/* Halves */
+.c6-123,.c6-234,.c6-345,.c6-456,
+.c4-12,.c4-23,.c4-34 {
+	width: 468px;
+}
+
+/* Three-Quarters */
+.c4-123,.c4-234 {
+	width: 717px;
+}
+
+/* Zeroing out leftmost.unit margins */
+.c6-1,.c6-12,.c6-123,.c6-1234,.c6-12345,.c6-123456,
+.c4-1,.c4-12,.c4-123,.c4-1234 {
+	margin-left: 0;
+}
+
+/* Zeroing out leftmost nested .unit margins */
+.c6-2 .c6-2,.c6-23 .c6-2,.c6-23 .c6-23,.c6-234 .c6-2,.c6-234 .c6-23,.c6-234 .c6-234,.c6-2345 .c6-2,.c6-2345 .c6-23,.c6-2345 .c6-234,.c6-2345 .c6-2345,.c6-23456 .c6-2,.c6-23456 .c6-23,.c6-23456 .c6-234,.c6-23456 .c6-2345,.c6-23456 .c6-23456,
+.c6-3 .c6-3,.c6-34 .c6-3,.c6-34 .c6-34,.c6-345 .c6-3,.c6-345 .c6-34,.c6-345 .c6-345,.c6-3456 .c6-3,.c6-3456 .c6-34,.c6-3456 .c6-345,.c6-3456 .c6-3456,
+.c6-4 .c6-4,.c6-45 .c6-4,.c6-45 .c6-45,.c6-456 .c6-4,.c6-456 .c6-45,.c6-456 .c6-456,
+.c6-5 .c6-5,.c6-56 .c6-5,.c6-56 .c6-56,
+.c6-6 .c6-6,
+.c4-2 .c4-2,.c4-23 .c4-2,.c4-23 .c4-23,.c4-234 .c4-2,.c4-234 .c4-23,.c4-234 .c4-234,
+.c4-3 .c4-3,.c4-34 .c4-3,.c4-34 .c4-34 {
+	margin-left: 0;
+}
+
+/* row clearfix */
+.row: fter {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+* html .row {
+	zoom: 1;
+}
+/* IE6 */
+*:first-child+html .row {
+	zoom: 1;
+}
