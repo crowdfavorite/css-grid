@@ -25,6 +25,8 @@
 	display: inline; /* IE6/IE7 double-margin float bug fix */
 	float: left;
 	margin-left: 30px;
+	/* Prevent overflow layout issues in IE6 */
+	overflow: hidden;
 }
 
 /* Sixths */
