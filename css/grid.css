@@ -22,7 +22,7 @@
 .c4-12,.c4-123,.c4-1234,
 .c4-23,.c4-234,
 .c4-34 {
-	_display: inline; /* IE6 */
+	display: inline; /* IE6/IE7 double-margin float bug fix */
 	float: left;
 	margin-left: 30px;
 }
@@ -81,7 +81,7 @@
 }
 
 /* row clearfix */
-.row: fter {
+.row:after {
 	visibility: hidden;
 	display: block;
 	font-size: 0;
@@ -89,10 +89,6 @@
 	clear: both;
 	height: 0;
 }
-* html .row {
-	zoom: 1;
-}
-/* IE6 */
-*:first-child+html .row {
+.row {
 	zoom: 1;
 }
