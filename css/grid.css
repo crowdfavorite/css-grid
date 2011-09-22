@@ -2,30 +2,115 @@
  *  https://github.com/crowdfavorite/css-grid
  *	License: http://opensource.org/licenses/mit-license.php  */
 
-.grid {
-	margin: 0 auto;
-	padding: 15px;
-	width: 966px;
+/** grid foundation
+ -------------------------------------------------- */
+body {
+	background-color: #eee;
 }
-
+.grid {
+	background-color: #fff;
+	margin: 0 auto;
+	/* this makes the page wide but keeps content away from the edge */
+	padding: 30px;
+}
 .row {
 	clear: left;
 }
 
-.c6-1,.c6-2,.c6-3,.c6-4,.c6-5,.c6-6,
-.c4-1,.c4-2,.c4-3,.c4-4,
-.c6-12,.c6-123,.c6-1234,.c6-12345,.c6-123456,
-.c6-23,.c6-234,.c6-2345,.c6-23456,
-.c6-34,.c6-345,.c6-3456,
-.c6-45,.c6-456,.c6-56,
-.c4-12,.c4-123,.c4-1234,
-.c4-23,.c4-234,
-.c4-34 {
-	display: inline; /* IE6/IE7 double-margin float bug fix */
-	float: left;
-	margin-left: 30px;
+@media only screen and (min-width: 760px) {
+	.grid {
+		width: 700px;
+	}
+	.c4-1,.c4-2,.c4-3,.c4-4,.c4-12,.c4-123,.c4-1234, .c4-23,.c4-234,.c4-34,
+	.c6-1,.c6-2,.c6-3,.c6-4,.c6-5,.c6-6,
+	.c6-12,.c6-123,.c6-1234,.c6-12345,.c6-123456,
+	.c6-23,.c6-234,.c6-2345,.c6-23456,
+	.c6-34,.c6-345,.c6-3456,
+	.c6-45,.c6-456,.c6-56 {
+		display: inline; /* IE6/IE7 double-margin float bug fix */
+		float: left;
+		margin-left: 20px;
+	}
+	/* sixths */
+	.c6-1,.c6-2,.c6-3,.c6-4,.c6-5,.c6-6 { width: 100px; }
+	/* quarters */
+	.c4-1,.c4-2,.c4-3,.c4-4 { width: 160px; }
+	/* thirds */
+	.c6-12,.c6-23,.c6-34,.c6-45,.c6-56 { width: 220px; }
+	/* halves */
+	.c4-12,.c4-23,.c4-34,
+	.c6-123,.c6-234,.c6-345,.c6-456 { width: 340px; }
+	/* two-thirds */
+	.c6-1234,.c6-2345,.c6-3456 { width: 460px; }
+	/* three-quarters */
+	.c4-123,.c4-234 { width: 520px; }
+	/* five-sixths */
+	.c6-12345,.c6-23456 { width: 580px; } 
 }
 
+@media only screen and (min-width: 1026px) {
+	.grid {
+		width: 966px;
+	}
+	.c4-1,.c4-2,.c4-3,.c4-4,.c4-12,.c4-123,.c4-1234, .c4-23,.c4-234,.c4-34,
+	.c6-1,.c6-2,.c6-3,.c6-4,.c6-5,.c6-6,
+	.c6-12,.c6-123,.c6-1234,.c6-12345,.c6-123456,
+	.c6-23,.c6-234,.c6-2345,.c6-23456,
+	.c6-34,.c6-345,.c6-3456,
+	.c6-45,.c6-456,.c6-56 {
+		display: inline; /* IE6/IE7 double-margin float bug fix */
+		float: left;
+		margin-left: 30px;
+	}
+	/* sixths */
+	.c6-1,.c6-2,.c6-3,.c6-4,.c6-5,.c6-6 { width: 136px; }
+	/* quarters */
+	.c4-1,.c4-2,.c4-3,.c4-4 { width: 219px; }
+	/* thirds */
+	.c6-12,.c6-23,.c6-34,.c6-45,.c6-56 { width: 302px; }
+	/* halves */
+	.c4-12,.c4-23,.c4-34,
+	.c6-123,.c6-234,.c6-345,.c6-456 { width: 468px; }
+	/* two-thirds */
+	.c6-1234,.c6-2345,.c6-3456 { width: 634px; }
+	/* three-quarters */
+	.c4-123,.c4-234 { width: 717px; }
+	/* five-sixths */
+	.c6-12345,.c6-23456 { width: 800px; } 
+}
+
+/** grid utilities
+ -------------------------------------------------- */
+/* row clearfix */
+.row:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+.row {
+	zoom: 1;
+}
+/* zeroing out leftmost.unit margins */
+.c6-1,.c6-12,.c6-123,.c6-1234,.c6-12345,.c6-123456,
+.c4-1,.c4-12,.c4-123,.c4-1234 {
+	margin-left: 0;
+}
+/* zeroing out leftmost nested .unit margins */
+.c6-2 .c6-2,.c6-23 .c6-2,.c6-23 .c6-23,.c6-234 .c6-2,.c6-234 .c6-23,.c6-234 .c6-234,.c6-2345 .c6-2,.c6-2345 .c6-23,.c6-2345 .c6-234,.c6-2345 .c6-2345,.c6-23456 .c6-2,.c6-23456 .c6-23,.c6-23456 .c6-234,.c6-23456 .c6-2345,.c6-23456 .c6-23456,
+.c6-3 .c6-3,.c6-34 .c6-3,.c6-34 .c6-34,.c6-345 .c6-3,.c6-345 .c6-34,.c6-345 .c6-345,.c6-3456 .c6-3,.c6-3456 .c6-34,.c6-3456 .c6-345,.c6-3456 .c6-3456,
+.c6-4 .c6-4,.c6-45 .c6-4,.c6-45 .c6-45,.c6-456 .c6-4,.c6-456 .c6-45,.c6-456 .c6-456,
+.c6-5 .c6-5,.c6-56 .c6-5,.c6-56 .c6-56,
+.c6-6 .c6-6,
+.c4-2 .c4-2,.c4-23 .c4-2,.c4-23 .c4-23,.c4-234 .c4-2,.c4-234 .c4-23,.c4-234 .c4-234,
+.c4-3 .c4-3,.c4-34 .c4-3,.c4-34 .c4-34 {
+	margin-left: 0;
+}
+
+/** grid helper classes
+ -------------------------------------------------- */
 /* Set overflow:hidden to crop overflow content.
 Good for user-generated content. Use this class if you want to support IE6 -- it has issues with overflow.
 Example usage: .grid.hideoverflow. */
@@ -39,70 +124,4 @@ Example usage: .grid.hideoverflow. */
 .hideoverflow .c4-23, .hideoverflow .c4-234,
 .hideoverflow .c4-34 {
 	overflow: hidden;
-}
-
-/* Sixths */
-.c6-1,.c6-2,.c6-3,.c6-4,.c6-5,.c6-6 {
-	width: 136px;
-}
-
-/* Thirds */
-.c6-12,.c6-23,.c6-34,.c6-45,.c6-56 {
-	width: 302px;
-}
-
-/* Two-Thirds */
-.c6-1234,.c6-2345,.c6-3456 {
-	width: 634px;
-}
-
-/* Five-Sixths */
-.c6-12345,.c6-23456 {
-	width: 800px;
-}
-
-/* Quarters */
-.c4-1,.c4-2,.c4-3,.c4-4 {
-	width: 219px;
-}
-
-/* Halves */
-.c6-123,.c6-234,.c6-345,.c6-456,
-.c4-12,.c4-23,.c4-34 {
-	width: 468px;
-}
-
-/* Three-Quarters */
-.c4-123,.c4-234 {
-	width: 717px;
-}
-
-/* Zeroing out leftmost.unit margins */
-.c6-1,.c6-12,.c6-123,.c6-1234,.c6-12345,.c6-123456,
-.c4-1,.c4-12,.c4-123,.c4-1234 {
-	margin-left: 0;
-}
-
-/* Zeroing out leftmost nested .unit margins */
-.c6-2 .c6-2,.c6-23 .c6-2,.c6-23 .c6-23,.c6-234 .c6-2,.c6-234 .c6-23,.c6-234 .c6-234,.c6-2345 .c6-2,.c6-2345 .c6-23,.c6-2345 .c6-234,.c6-2345 .c6-2345,.c6-23456 .c6-2,.c6-23456 .c6-23,.c6-23456 .c6-234,.c6-23456 .c6-2345,.c6-23456 .c6-23456,
-.c6-3 .c6-3,.c6-34 .c6-3,.c6-34 .c6-34,.c6-345 .c6-3,.c6-345 .c6-34,.c6-345 .c6-345,.c6-3456 .c6-3,.c6-3456 .c6-34,.c6-3456 .c6-345,.c6-3456 .c6-3456,
-.c6-4 .c6-4,.c6-45 .c6-4,.c6-45 .c6-45,.c6-456 .c6-4,.c6-456 .c6-45,.c6-456 .c6-456,
-.c6-5 .c6-5,.c6-56 .c6-5,.c6-56 .c6-56,
-.c6-6 .c6-6,
-.c4-2 .c4-2,.c4-23 .c4-2,.c4-23 .c4-23,.c4-234 .c4-2,.c4-234 .c4-23,.c4-234 .c4-234,
-.c4-3 .c4-3,.c4-34 .c4-3,.c4-34 .c4-34 {
-	margin-left: 0;
-}
-
-/* row clearfix */
-.row:after {
-	visibility: hidden;
-	display: block;
-	font-size: 0;
-	content: " ";
-	clear: both;
-	height: 0;
-}
-.row {
-	zoom: 1;
 }
