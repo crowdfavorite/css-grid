@@ -4,9 +4,6 @@
 
 /** grid foundation
  -------------------------------------------------- */
-body {
-	background-color: #eee;
-}
 .grid {
 	background-color: #fff;
 	margin: 0 auto;
