@@ -17,6 +17,14 @@ body {
 	clear: left;
 }
 
+/* fluid media */
+.row img,
+.row object,
+.row embed,
+.row video {
+  max-width: 100%;
+}
+
 @media only screen and (min-width: 760px) {
 	.grid {
 		width: 700px;
