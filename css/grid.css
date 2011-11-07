@@ -63,8 +63,6 @@ Works fine with older browsers that don't support media queries. */
 	.c6-23,.c6-234,.c6-2345,.c6-23456,
 	.c6-34,.c6-345,.c6-3456,
 	.c6-45,.c6-456,.c6-56 {
-		display: inline; /* IE6/IE7 double-margin float bug fix */
-		float: left;
 		margin-left: 20px;
 	}
 	/* sixths */
