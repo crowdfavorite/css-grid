@@ -5,7 +5,6 @@
 /** grid foundation
  -------------------------------------------------- */
 .grid {
-	background-color: #fff;
 	margin: 0 auto;
 	/* this makes the page wide but keeps content away from the edge */
 	padding: 30px;
