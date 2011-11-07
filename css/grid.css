@@ -22,7 +22,39 @@
   max-width: 100%;
 }
 
-@media only screen and (min-width: 760px) {
+/* Default large grid.
+Works fine with older browsers that don't support media queries. */
+.grid {
+	width: 966px;
+}
+.c4-1,.c4-2,.c4-3,.c4-4,.c4-12,.c4-123,.c4-1234, .c4-23,.c4-234,.c4-34,
+.c6-1,.c6-2,.c6-3,.c6-4,.c6-5,.c6-6,
+.c6-12,.c6-123,.c6-1234,.c6-12345,.c6-123456,
+.c6-23,.c6-234,.c6-2345,.c6-23456,
+.c6-34,.c6-345,.c6-3456,
+.c6-45,.c6-456,.c6-56 {
+	display: inline; /* IE6/IE7 double-margin float bug fix */
+	float: left;
+	margin-left: 30px;
+}
+/* sixths */
+.c6-1,.c6-2,.c6-3,.c6-4,.c6-5,.c6-6 { width: 136px; }
+/* quarters */
+.c4-1,.c4-2,.c4-3,.c4-4 { width: 219px; }
+/* thirds */
+.c6-12,.c6-23,.c6-34,.c6-45,.c6-56 { width: 302px; }
+/* halves */
+.c4-12,.c4-23,.c4-34,
+.c6-123,.c6-234,.c6-345,.c6-456 { width: 468px; }
+/* two-thirds */
+.c6-1234,.c6-2345,.c6-3456 { width: 634px; }
+/* three-quarters */
+.c4-123,.c4-234 { width: 717px; }
+/* five-sixths */
+.c6-12345,.c6-23456 { width: 800px; }
+
+/* Medium-sized grid. */
+@media only screen and (min-width: 760px) and (max-width: 1025px) {
 	.grid {
 		width: 700px;
 	}
@@ -53,35 +85,20 @@
 	.c6-12345,.c6-23456 { width: 580px; } 
 }
 
-@media only screen and (min-width: 1026px) {
-	.grid {
-		width: 966px;
-	}
+/* Single-column mobile */
+@media only screen and (max-width: 759px) {
+	.grid,
 	.c4-1,.c4-2,.c4-3,.c4-4,.c4-12,.c4-123,.c4-1234, .c4-23,.c4-234,.c4-34,
 	.c6-1,.c6-2,.c6-3,.c6-4,.c6-5,.c6-6,
 	.c6-12,.c6-123,.c6-1234,.c6-12345,.c6-123456,
 	.c6-23,.c6-234,.c6-2345,.c6-23456,
 	.c6-34,.c6-345,.c6-3456,
 	.c6-45,.c6-456,.c6-56 {
-		display: inline; /* IE6/IE7 double-margin float bug fix */
-		float: left;
-		margin-left: 30px;
+		display: block;
+		float: none;
+		margin-left: 0;
+		width: auto;
 	}
-	/* sixths */
-	.c6-1,.c6-2,.c6-3,.c6-4,.c6-5,.c6-6 { width: 136px; }
-	/* quarters */
-	.c4-1,.c4-2,.c4-3,.c4-4 { width: 219px; }
-	/* thirds */
-	.c6-12,.c6-23,.c6-34,.c6-45,.c6-56 { width: 302px; }
-	/* halves */
-	.c4-12,.c4-23,.c4-34,
-	.c6-123,.c6-234,.c6-345,.c6-456 { width: 468px; }
-	/* two-thirds */
-	.c6-1234,.c6-2345,.c6-3456 { width: 634px; }
-	/* three-quarters */
-	.c4-123,.c4-234 { width: 717px; }
-	/* five-sixths */
-	.c6-12345,.c6-23456 { width: 800px; } 
 }
 
 /** grid utilities
