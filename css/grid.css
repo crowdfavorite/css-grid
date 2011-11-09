@@ -9,9 +9,6 @@
 	/* this makes the page wide but keeps content away from the edge */
 	padding: 30px;
 }
-.row {
-	clear: left;
-}
 
 /* fluid media */
 .row img,
@@ -128,17 +125,22 @@ Get rid of widths and floats, go to fluid single column. */
 
 /** grid utilities
  -------------------------------------------------- */
-/* row clearfix */
+/* Row Clearfix
+Uses variation of Nicolas Gallagher's Micro Clearfix.
+http://nicolasgallagher.com/micro-clearfix-hack/ */
+.row:before,
 .row:after {
-	visibility: hidden;
-	display: block;
-	font-size: 0;
-	content: " ";
-	clear: both;
-	height: 0;
+	content:"";
+	display:table;
+}
+.row:after {
+	clear:both;
 }
 .row {
-	zoom: 1;
+	/* Just in case: make sure that rows clear outside floats. */
+	clear: both;
+	/* For IE 6/7 (trigger hasLayout) */
+	zoom:1;
 }
 
 /** grid helper classes
