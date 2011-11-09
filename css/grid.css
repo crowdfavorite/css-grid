@@ -32,6 +32,10 @@ Works fine with older browsers that don't support media queries. */
 	display: inline; /* IE6/IE7 double-margin float bug fix */
 	float: left;
 	margin-left: 30px;
+	/* Prevent collapsing of empty columns. Min-height prevents collapse
+	everywhere but IE6. IE6 doesn't collapse empty collumns anyhow, so no need
+	for a fix there. */
+	min-height: 1px;
 }
 
 /* Sixths */
@@ -57,6 +61,7 @@ so these classes can be used on non-block-level elements. */
 .c6-123456,
 .c4-1234 {
 	display: block;
+	min-height: 1px;
 	width: auto;
 }
 
