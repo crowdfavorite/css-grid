@@ -15,7 +15,7 @@
 .row object,
 .row embed,
 .row video {
-  max-width: 100%;
+	max-width: 100%;
 }
 
 /* Default large grid.
