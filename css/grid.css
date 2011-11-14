@@ -60,6 +60,7 @@ have either margin or fixed width. Including display:block and width styles
 so these classes can be used on non-block-level elements. */
 .c6-123456,
 .c4-1234 {
+	clear: both;
 	display: block;
 	min-height: 1px;
 	width: auto;
