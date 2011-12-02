@@ -4,7 +4,7 @@
 
 /** grid foundation
  -------------------------------------------------- */
-.grid {
+.cf-css-grid {
 	margin: 0 auto;
 	/* this makes the page wide but keeps content away from the edge */
 	padding: 30px;
@@ -20,7 +20,7 @@
 
 /* Default large grid.
 Works fine with older browsers that don't support media queries. */
-.grid {
+.cf-css-grid {
 	width: 966px;
 }
 .c4-1,.c4-2,.c4-3,.c4-4,.c4-12,.c4-123, .c4-23,.c4-234,.c4-34,
@@ -68,7 +68,7 @@ so these classes can be used on non-block-level elements. */
 
 /* Medium-sized grid. */
 @media only screen and (min-width: 760px) and (max-width: 1025px) {
-	.grid {
+	.cf-css-grid {
 		width: 700px;
 	}
 	.c4-1,.c4-2,.c4-3,.c4-4,.c4-12,.c4-123, .c4-23,.c4-234,.c4-34,
@@ -99,7 +99,7 @@ so these classes can be used on non-block-level elements. */
 /* Single-column mobile
 Get rid of widths and floats, go to fluid single column. */
 @media only screen and (max-width: 759px) {
-	.grid,
+	.cf-css-grid,
 	.c4-1,.c4-2,.c4-3,.c4-4,.c4-12,.c4-123, .c4-23,.c4-234,.c4-34,
 	.c6-1,.c6-2,.c6-3,.c6-4,.c6-5,.c6-6,
 	.c6-12,.c6-123,.c6-1234,.c6-12345,
