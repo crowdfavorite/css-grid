@@ -7,7 +7,7 @@
 .grid {
 	margin: 0 auto;
 	/* this makes the page wide but keeps content away from the edge */
-	padding: 30px;
+	padding: 3%;
 }
 
 /* fluid media */
@@ -18,41 +18,139 @@
 	max-width: 100%;
 }
 
-/* Default large grid.
-Works fine with older browsers that don't support media queries. */
-.grid {
-	width: 966px;
-}
+.grid,
 .c4-1,.c4-2,.c4-3,.c4-4,.c4-12,.c4-123, .c4-23,.c4-234,.c4-34,
 .c6-1,.c6-2,.c6-3,.c6-4,.c6-5,.c6-6,
 .c6-12,.c6-123,.c6-1234,.c6-12345,
 .c6-23,.c6-234,.c6-2345,.c6-23456,
 .c6-34,.c6-345,.c6-3456,
 .c6-45,.c6-456,.c6-56 {
-	display: inline; /* IE6/IE7 double-margin float bug fix */
-	float: left;
-	margin-left: 30px;
-	/* Prevent collapsing of empty columns. Min-height prevents collapse
-	everywhere but IE6. IE6 doesn't collapse empty collumns anyhow, so no need
-	for a fix there. */
-	min-height: 1px;
+/* these should already be defaults
+	display: block;
+	width: auto;*/
 }
 
-/* Sixths */
-.c6-1,.c6-2,.c6-3,.c6-4,.c6-5,.c6-6 { width: 136px; }
-/* Quarters */
-.c4-1,.c4-2,.c4-3,.c4-4 { width: 219px; }
-/* Thirds */
-.c6-12,.c6-23,.c6-34,.c6-45,.c6-56 { width: 302px; }
-/* Halves */
-.c4-12,.c4-23,.c4-34,
-.c6-123,.c6-234,.c6-345,.c6-456 { width: 468px; }
-/* Two-thirds */
-.c6-1234,.c6-2345,.c6-3456 { width: 634px; }
-/* three-quarters */
-.c4-123,.c4-234 { width: 717px; }
-/* Five-sixths */
-.c6-12345,.c6-23456 { width: 800px; }
+
+
+/* Larger Displays */
+@media only screen and (min-width: 740px) {
+	.grid {
+		padding: 2.7027%; /* 20px */
+		width: 94.5946%; /* 700px */
+	}
+	.c4-1,.c4-2,.c4-3,.c4-4,.c4-12,.c4-123, .c4-23,.c4-234,.c4-34,
+	.c6-1,.c6-2,.c6-3,.c6-4,.c6-5,.c6-6,
+	.c6-12,.c6-123,.c6-1234,.c6-12345,
+	.c6-23,.c6-234,.c6-2345,.c6-23456,
+	.c6-34,.c6-345,.c6-3456,
+	.c6-45,.c6-456,.c6-56 {
+		display: inline; /* IE6/IE7 double-margin float bug fix */
+		float: left;
+		margin-left: 2.85716%; /* 20px */
+		/* Prevent collapsing of empty columns. Min-height prevents collapse
+		everywhere but IE6. IE6 doesn't collapse empty collumns anyhow, so no need
+		for a fix there. */
+		min-height: 1px;
+	}
+	/* sixths */
+	.c6-1,.c6-2,.c6-3,.c6-4,.c6-5,.c6-6 { width: 14.2857%; } /* 100px */
+	/* quarters */
+	.c4-1,.c4-2,.c4-3,.c4-4 { width: 22.85713%; } /* 160px */
+	/* thirds */
+	.c6-12,.c6-23,.c6-34,.c6-45,.c6-56 { width: 31.42856%; } /* 220px */
+	/* halves */
+	.c4-12,.c4-23,.c4-34,
+	.c6-123,.c6-234,.c6-345,.c6-456 { width: 48.57142%; } /* 340px */
+	/* two-thirds */
+	.c6-1234,.c6-2345,.c6-3456 { width: 65.71428%; } /* 460px */
+	/* three-quarters */
+	.c4-123,.c4-234 { width: 74.28571%; } /* 520px */
+	/* five-sixths */
+	.c6-12345,.c6-23456 { width: 82.85714%; } /* 580px */
+
+	/* nested styles (good for 1 level deed) */
+
+	/* 1/6 */
+	.c6-123456 .c6-1, .c6-123456 .c6-2, .c6-123456 .c6-3, .c6-123456 .c6-4, .c6-123456 .c6-5, .c6-123456 .c6-6 {
+		width: 14.2857%;
+	}
+
+	/* 1/5 */
+	.c6-12345 .c6-1, .c6-12345 .c6-2, .c6-12345 .c6-3, .c6-12345 .c6-4, .c6-12345 .c6-5,
+	.c6-23456 .c6-2, .c6-23456 .c6-3, .c6-23456 .c6-4, .c6-23456 .c6-5, .c6-23456 .c6-6 {
+		width: 17.714272%;
+	}
+
+	/* 1/4 */
+	.c6-1234 .c6-1, .c6-1234 .c6-2, .c6-1234 .c6-3, .c6-1234 .c6-4,
+	.c6-2345 .c6-2, .c6-2345 .c6-3, .c6-2345 .c6-4, .c6-2345 .c6-5,
+	.c6-3456 .c6-3, .c6-3456 .c6-4, .c6-3456 .c6-5, .c6-3456 .c6-6,
+	.c4-1234 .c4-1, .c4-1234 .c4-2, .c4-1234 .c4-3, .c4-1234 .c4-4 {
+		width: 22.85713%;
+	}
+
+	/* 1/3 */
+	.c6-123 .c6-1, .c6-123 .c6-2, .c6-123 .c6-3,
+	.c6-234 .c6-2, .c6-234 .c6-3, .c6-234 .c6-4,
+	.c6-345 .c6-3, .c6-345 .c6-4, .c6-345 .c6-5,
+	.c6-456 .c6-4, .c6-456 .c6-5, .c6-456 .c6-6,
+	.c6-123456 .c6-12, .c6-123456 .c6-23, .c6-123456 .c6-34, .c6-123456 .c6-45, .c6-123456 .c6-56,
+	.c4-123 .c4-1, .c4-123 .c4-2, .c4-123 .c4-3,
+	.c4-234 .c4-2, .c4-234 .c4-3, .c4-234 .c4-4 {
+		width: 31.42856%;
+	}
+
+	/* 1/2 */
+	.c6-12 .c6-1, .c6-12 .c6-2,
+	.c6-23 .c6-2, .c6-23 .c6-3,
+	.c6-34 .c6-3, .c6-34 .c6-4,
+	.c6-45 .c6-4, .c6-45 .c6-5,
+	.c6-56 .c6-5, .c6-56 .c6-6,
+	.c6-1234 .c6-12, .c6-1234 .c6-23, .c6-1234 .c6-34,
+	.c6-2345 .c6-23, .c6-2345 .c6-34, .c6-2345 .c6-45,
+	.c6-3456 .c6-34, .c6-3456 .c6-45, .c6-3456 .c6-56,
+	.c4-12 .c4-1, .c4-12 .c4-2,
+	.c4-23 .c4-2, .c4-23 .c4-3,
+	.c4-34 .c4-3, .c4-34 .c4-4 {
+		width: 48.57142%;
+	}
+
+	/* 2/3 */
+	.c6-123 .c6-12, .c6-123 .c6-23,
+	.c6-234 .c6-23, .c6-234 .c6-34,
+	.c6-345 .c6-34, .c6-345 .c6-45,
+	.c6-456 .c6-45, .c6-456 .c6-56,
+	.c6-123456 .c6-1234, .c6-123456 .c6-2345, .c6-123456 .c6-3456,
+	.c4-123 .c4-12, .c4-123 .c4-23,
+	.c4-234 .c4-23, .c4-234 .c4-34 {
+		width: 65.71428%;
+	}
+
+	/* 3/4 */
+	.c4-1234 .c4-123, .c4-1234 .c4-234 {
+		width: 74.28571%;
+	}
+
+	/* 5/6 */
+	.c6-123456 .c6-12345, .c6-123456 .c6-23456 {
+		width: 82.85714%/
+	}
+
+	/* 100% */
+	.c6-1 .c6-1, .c6-2 .c6-2, .c6-3 .c6-3, .c6-4 .c6-4, .c6-5 .c6-5, .c6-6 .c6-6,
+	.c6-12 .c6-12, .c6-23 .c6-23, .c6-34 .c6-34, .c6-45 .c6-45, .c6-56 .c6-56,
+	.c6-123 .c6-123, .c6-234 .c6-234, .c6-345 .c6-345, .c6-456 .c6-456,
+	.c6-1234 .c6-1234, .c6-2345 .c6-2345, .c6-3456 .c6-3456,
+	.c6-12345 .c6-12345, .c6-23456 .c6-23456,
+	.c6-123456 .c6-123456,
+	.c4-1 .c4-1, .c4-2 .c4-2, .c4-3 .c4-3, .c4-4 .c4-4,
+	.c4-12 .c4-12, .c4-23 .c4-23, .c4-34 .c4-34,
+	.c4-123 .c4-123, .c4-234 .c4-234,
+	.c4-1234 .c4-1234 {
+		width: 100%;
+	}
+}
+
 
 /* Full-width
 These classes are not included in column float definitions, since they don't
@@ -64,53 +162,6 @@ so these classes can be used on non-block-level elements. */
 	display: block;
 	min-height: 1px;
 	width: auto;
-}
-
-/* Medium-sized grid. */
-@media only screen and (min-width: 760px) and (max-width: 1025px) {
-	.grid {
-		width: 700px;
-	}
-	.c4-1,.c4-2,.c4-3,.c4-4,.c4-12,.c4-123, .c4-23,.c4-234,.c4-34,
-	.c6-1,.c6-2,.c6-3,.c6-4,.c6-5,.c6-6,
-	.c6-12,.c6-123,.c6-1234,.c6-12345,
-	.c6-23,.c6-234,.c6-2345,.c6-23456,
-	.c6-34,.c6-345,.c6-3456,
-	.c6-45,.c6-456,.c6-56 {
-		margin-left: 20px;
-	}
-	/* sixths */
-	.c6-1,.c6-2,.c6-3,.c6-4,.c6-5,.c6-6 { width: 100px; }
-	/* quarters */
-	.c4-1,.c4-2,.c4-3,.c4-4 { width: 160px; }
-	/* thirds */
-	.c6-12,.c6-23,.c6-34,.c6-45,.c6-56 { width: 220px; }
-	/* halves */
-	.c4-12,.c4-23,.c4-34,
-	.c6-123,.c6-234,.c6-345,.c6-456 { width: 340px; }
-	/* two-thirds */
-	.c6-1234,.c6-2345,.c6-3456 { width: 460px; }
-	/* three-quarters */
-	.c4-123,.c4-234 { width: 520px; }
-	/* five-sixths */
-	.c6-12345,.c6-23456 { width: 580px; } 
-}
-
-/* Single-column mobile
-Get rid of widths and floats, go to fluid single column. */
-@media only screen and (max-width: 759px) {
-	.grid,
-	.c4-1,.c4-2,.c4-3,.c4-4,.c4-12,.c4-123, .c4-23,.c4-234,.c4-34,
-	.c6-1,.c6-2,.c6-3,.c6-4,.c6-5,.c6-6,
-	.c6-12,.c6-123,.c6-1234,.c6-12345,
-	.c6-23,.c6-234,.c6-2345,.c6-23456,
-	.c6-34,.c6-345,.c6-3456,
-	.c6-45,.c6-456,.c6-56 {
-		display: block;
-		float: none;
-		margin-left: 0;
-		width: auto;
-	}
 }
 
 /* zeroing out leftmost.unit margins */
