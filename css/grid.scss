@@ -88,7 +88,7 @@ $margin: 2.85716%; /* 20px */
 	/* five-sixths */
 	.c6-12345,.c6-23456 { width: $five-sixths; } /* 580px */
 
-	/* margins for nested elements (will) */
+	/* margins for nested elements */
 
 	/* Parent: one third */
 		.c6-12 .c6-2,
@@ -257,7 +257,6 @@ $margin: 2.85716%; /* 20px */
 			width: ((100% -((1) * $half-margins)) / 2 );
 		}
 
-
 	/* 100% */
 	.c6-1 .c6-1, .c6-2 .c6-2, .c6-3 .c6-3, .c6-4 .c6-4, .c6-5 .c6-5, .c6-6 .c6-6,
 	.c6-12 .c6-12, .c6-23 .c6-23, .c6-34 .c6-34, .c6-45 .c6-45, .c6-56 .c6-56,
@@ -272,7 +271,6 @@ $margin: 2.85716%; /* 20px */
 		width: 100%;
 	}
 }
-
 
 /* Full-width
 These classes are not included in column float definitions, since they don't
