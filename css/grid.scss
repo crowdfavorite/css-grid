@@ -58,13 +58,15 @@ $margin: 2.85716%; /* 20px */
 
 /* Min-width Experiment (with fixed sidebar width */
 
+// This is only for a min-width element on the right. Just apply the usual classes
+// and tack on "-mw".
+
 @function strip-units($number) {
-  @return $number / ($number * 0 + 1);
+ 	@return $number / ($number * 0 + 1);
 }
 
 $min-width: 320px;
 $third-cutoff: ($min-width * strip-units($third)/10px)+px;
-
 
 .row-mw {
 	@extend .row;
