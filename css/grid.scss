@@ -36,7 +36,7 @@ $margin: 2.85716%; /* 20px */
 
 	/* Widths (for parent elemtents) */
 
-	$sixth: 14.2857%;;
+	$sixth: 14.2857%;
 	$quarter: 22.85713%;
 	$third: 31.42856%;
 	$half: 48.57142%;
@@ -45,12 +45,62 @@ $margin: 2.85716%; /* 20px */
 	$five-sixths: 82.85714%;
 
 	/* Adjusted margins (for nested elements) */
-	
+
 	$third-margins: (100%/$third) * $margin;
 	$half-margins: (100%/$half) * $margin;
 	$two-thirds-margins: (100%/$two-thirds) * $margin;
 	$three-quarters-margins: (100%/$three-quarters) * $margin;
 	$five-sixths-margins: (100%/$five-sixths) * $margin;
+
+
+
+
+
+/* Min-width Experiment (with fixed sidebar width */
+
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+$min-width: 320px;
+$third-cutoff: ($min-width * strip-units($third)/10px)+px;
+
+
+.row-mw {
+	@extend .row;
+	padding-right: $min-width;
+	position: relative;
+
+	@media screen and (min-width: #{$third-cutoff}) {
+		padding-right: 0px;
+		width: 100%;
+		position: static;
+	}
+}
+
+.c6-1234-mw {
+	width: 100%;
+	float: left;
+	min-height: 1px;
+	display: inline;
+
+	@media screen and (min-width: #{$third-cutoff}) {
+		//normal c6.1234 attr's
+		width: $two-thirds;
+	}
+}
+
+.c6-56-mw {
+	@extend .c6-56;
+	min-width: $min-width;
+	position: absolute;
+	right: 0;
+
+	@media screen and (min-width: #{$third-cutoff}) {
+		//normal c6.1234 attr's
+		position: static;
+	}
+}
 
 /* Larger Displays */
 @media only screen and (min-width: 740px) {
