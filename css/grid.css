@@ -35,7 +35,7 @@
 /* Adjusted margins (for nested elements) */
 /* Min-width Experiment (with fixed sidebar width */
 .row-mw {
-  padding-right: 320px;
+  padding-right: 340px;
   position: relative; }
   @media screen and (min-width: 1005.71392px) {
     .row-mw {
@@ -53,7 +53,7 @@
       width: 65.71428%; } }
 
 .c6-56-mw {
-  min-width: 320px;
+  min-width: 300px;
   position: absolute;
   right: 0; }
   @media screen and (min-width: 1005.71392px) {

@@ -68,7 +68,7 @@ $third-cutoff: ($min-width * strip-units($third)/10px)+px;
 
 .row-mw {
 	@extend .row;
-	padding-right: $min-width;
+	padding-right: $min-width + 20px;
 	position: relative;
 
 	@media screen and (min-width: #{$third-cutoff}) {
@@ -92,7 +92,7 @@ $third-cutoff: ($min-width * strip-units($third)/10px)+px;
 
 .c6-56-mw {
 	@extend .c6-56;
-	min-width: $min-width;
+	min-width: ($min-width - 20px);
 	position: absolute;
 	right: 0;
 
