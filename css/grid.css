@@ -42,6 +42,9 @@
       padding-right: 0px;
       width: 100%;
       position: static; } }
+  @media screen and (max-width: 740px) {
+    .row-mw {
+      padding: 0px; } }
 
 .c6-1234-mw {
   width: 100%;
@@ -51,6 +54,9 @@
   @media screen and (min-width: 1005.71392px) {
     .c6-1234-mw {
       width: 65.71428%; } }
+  @media screen and (max-width: 740px) {
+    .c6-1234-mw {
+      width: 100%; } }
 
 .c6-56-mw {
   min-width: 300px;
@@ -59,6 +65,11 @@
   @media screen and (min-width: 1005.71392px) {
     .c6-56-mw {
       position: static; } }
+  @media screen and (max-width: 740px) {
+    .c6-56-mw {
+      width: 100%;
+      position: static;
+      float: left; } }
 
 /* Larger Displays */
 @media only screen and (min-width: 740px) {

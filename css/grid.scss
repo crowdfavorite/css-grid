@@ -76,6 +76,10 @@ $third-cutoff: ($min-width * strip-units($third)/10px)+px;
 		width: 100%;
 		position: static;
 	}
+
+	@media screen and (max-width: 740px) {
+		padding: 0px;
+	}
 }
 
 .c6-1234-mw {
@@ -88,6 +92,10 @@ $third-cutoff: ($min-width * strip-units($third)/10px)+px;
 		//normal c6.1234 attr's
 		width: $two-thirds;
 	}
+
+	@media screen and (max-width: 740px) {
+		width: 100%;
+	}
 }
 
 .c6-56-mw {
@@ -99,6 +107,12 @@ $third-cutoff: ($min-width * strip-units($third)/10px)+px;
 	@media screen and (min-width: #{$third-cutoff}) {
 		//normal c6.1234 attr's
 		position: static;
+	}
+
+	@media screen and (max-width: 740px) {
+		width: 100%;
+		position: static;
+		float: left;
 	}
 }
 
