@@ -104,7 +104,7 @@ Get rid of widths and floats, go to fluid single column. */
 	}
 }
 
-/* zeroing out unit margins whose class contains c6-1 or c4-1 */
+/* zeroing out leftmost .unit margins */
 [class*="c6-1"], 
 [class*="c4-1"] {
 	margin-left: 0;
