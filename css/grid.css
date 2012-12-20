@@ -154,14 +154,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/ */
 /* Set overflow:hidden to crop overflow content.
 Good for user-generated content. Use this class if you want to support IE6 -- it has issues with overflow.
 Example usage: .grid.hideoverflow. */
-.hideoverflow .c6-1, .hideoverflow .c6-2, .hideoverflow .c6-3, .hideoverflow .c6-4, .hideoverflow .c6-5, .hideoverflow .c6-6,
-.hideoverflow .c4-1, .hideoverflow .c4-2, .hideoverflow .c4-3, .hideoverflow .c4-4,
-.hideoverflow .c6-12, .hideoverflow .c6-123, .hideoverflow .c6-1234, .hideoverflow .c6-12345, .hideoverflow .c6-123456,
-.hideoverflow .c6-23, .hideoverflow .c6-234, .hideoverflow .c6-2345, .hideoverflow .c6-23456,
-.hideoverflow .c6-34, .hideoverflow .c6-345, .hideoverflow .c6-3456,
-.hideoverflow .c6-45, .hideoverflow .c6-456, .hideoverflow .c6-56,
-.hideoverflow .c4-12, .hideoverflow .c4-123, .hideoverflow .c4-1234,
-.hideoverflow .c4-23, .hideoverflow .c4-234,
-.hideoverflow .c4-34 {
+.hideoverflow [class^=c6-],
+.hideoverflow [class^=c4-] {
 	overflow: hidden;
 }
