@@ -23,12 +23,9 @@ Works fine with older browsers that don't support media queries. */
 .grid {
 	width: 966px;
 }
-.c4-1,.c4-2,.c4-3,.c4-4,.c4-12,.c4-123, .c4-23,.c4-234,.c4-34,
-.c6-1,.c6-2,.c6-3,.c6-4,.c6-5,.c6-6,
-.c6-12,.c6-123,.c6-1234,.c6-12345,
-.c6-23,.c6-234,.c6-2345,.c6-23456,
-.c6-34,.c6-345,.c6-3456,
-.c6-45,.c6-456,.c6-56 {
+/* Apply to classes that contain c6- or c4- */
+[class*="c6-"], 
+[class*="c4-"] {
 	display: inline; /* IE6/IE7 double-margin float bug fix */
 	float: left;
 	margin-left: 30px;
@@ -60,9 +57,9 @@ have either margin or fixed width. Including display:block and width styles
 so these classes can be used on non-block-level elements. */
 .c6-123456,
 .c4-1234 {
+	float: none;
 	clear: both;
 	display: block;
-	min-height: 1px;
 	width: auto;
 }
 
@@ -71,12 +68,9 @@ so these classes can be used on non-block-level elements. */
 	.grid {
 		width: 700px;
 	}
-	.c4-1,.c4-2,.c4-3,.c4-4,.c4-12,.c4-123, .c4-23,.c4-234,.c4-34,
-	.c6-1,.c6-2,.c6-3,.c6-4,.c6-5,.c6-6,
-	.c6-12,.c6-123,.c6-1234,.c6-12345,
-	.c6-23,.c6-234,.c6-2345,.c6-23456,
-	.c6-34,.c6-345,.c6-3456,
-	.c6-45,.c6-456,.c6-56 {
+	/* Apply to classes that contain c6- or c4- */
+	[class*="c6-"], 
+	[class*="c4-"] {
 		margin-left: 20px;
 	}
 	/* sixths */
@@ -100,12 +94,9 @@ so these classes can be used on non-block-level elements. */
 Get rid of widths and floats, go to fluid single column. */
 @media only screen and (max-width: 759px) {
 	.grid,
-	.c4-1,.c4-2,.c4-3,.c4-4,.c4-12,.c4-123, .c4-23,.c4-234,.c4-34,
-	.c6-1,.c6-2,.c6-3,.c6-4,.c6-5,.c6-6,
-	.c6-12,.c6-123,.c6-1234,.c6-12345,
-	.c6-23,.c6-234,.c6-2345,.c6-23456,
-	.c6-34,.c6-345,.c6-3456,
-	.c6-45,.c6-456,.c6-56 {
+	/* Apply to classes that contain c6- or c4- */
+	[class*="c6-"], 
+	[class*="c4-"] {
 		display: block;
 		float: none;
 		margin-left: 0;
@@ -113,9 +104,9 @@ Get rid of widths and floats, go to fluid single column. */
 	}
 }
 
-/* zeroing out leftmost.unit margins */
-.c6-1,.c6-12,.c6-123,.c6-1234,.c6-12345,
-.c4-1,.c4-12,.c4-123 {
+/* zeroing out unit margins whose class contains c6-1 or c4-1 */
+[class*="c6-1"], 
+[class*="c4-1"] {
 	margin-left: 0;
 }
 /* zeroing out leftmost nested .unit margins */
@@ -154,7 +145,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/ */
 /* Set overflow:hidden to crop overflow content.
 Good for user-generated content. Use this class if you want to support IE6 -- it has issues with overflow.
 Example usage: .grid.hideoverflow. */
-.hideoverflow [class^=c6-],
-.hideoverflow [class^=c4-] {
+.hideoverflow [class*="c6-"],
+.hideoverflow [class*="c4-"] {
 	overflow: hidden;
 }
