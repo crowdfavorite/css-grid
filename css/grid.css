@@ -9,13 +9,10 @@
   padding: 3%; }
 
 /* fluid media */
-.row img, .row-mw img,
+.row img,
 .row object,
-.row-mw object,
 .row embed,
-.row-mw embed,
-.row video,
-.row-mw video {
+.row video {
   max-width: 100%; }
 
 .grid,
@@ -24,7 +21,7 @@
 .c6-12, .c6-123, .c6-1234, .c6-12345,
 .c6-23, .c6-234, .c6-2345, .c6-23456,
 .c6-34, .c6-345, .c6-3456,
-.c6-45, .c6-456, .c6-56, .c6-56-mw {
+.c6-45, .c6-456, .c6-56 {
   /* these should already be defaults
   	display: block;
   	width: auto;*/ }
@@ -35,41 +32,21 @@
 /* Adjusted margins (for nested elements) */
 /* Min-width Experiment (with fixed sidebar width */
 .row-mw {
-  padding-right: 340px;
-  position: relative; }
-  @media screen and (min-width: 1005.71392px) {
-    .row-mw {
-      padding-right: 0px;
-      width: 100%;
-      position: static; } }
-  @media screen and (max-width: 740px) {
-    .row-mw {
-      padding: 0px; } }
-
-.c6-1234-mw {
-  width: 100%;
   float: left;
-  min-height: 1px;
-  display: inline; }
-  @media screen and (min-width: 1005.71392px) {
-    .c6-1234-mw {
-      width: 65.71428%; } }
-  @media screen and (max-width: 740px) {
-    .c6-1234-mw {
-      width: 100%; } }
+  width: 100%; }
+
+@media only screen and (min-width: 740px) {
+  .c6-1234-mw {
+    margin-right: 320px; } }
 
 .c6-56-mw {
-  min-width: 300px;
-  position: absolute;
-  right: 0; }
-  @media screen and (min-width: 1005.71392px) {
+  width: 100%;
+  float: left; }
+  @media only screen and (min-width: 740px) {
     .c6-56-mw {
-      position: static; } }
-  @media screen and (max-width: 740px) {
-    .c6-56-mw {
-      width: 100%;
-      position: static;
-      float: left; } }
+      float: right;
+      width: 280px;
+      margin-left: -100%; } }
 
 /* Larger Displays */
 @media only screen and (min-width: 740px) {
@@ -84,7 +61,7 @@
   .c6-12, .c6-123, .c6-1234, .c6-12345,
   .c6-23, .c6-234, .c6-2345, .c6-23456,
   .c6-34, .c6-345, .c6-3456,
-  .c6-45, .c6-456, .c6-56, .c6-56-mw {
+  .c6-45, .c6-456, .c6-56 {
     display: inline;
     /* IE6/IE7 double-margin float bug fix */
     float: left;
@@ -106,7 +83,7 @@
 
   /* 160px */
   /* thirds */
-  .c6-12, .c6-23, .c6-34, .c6-45, .c6-56, .c6-56-mw {
+  .c6-12, .c6-23, .c6-34, .c6-45, .c6-56 {
     width: 31.42856%; }
 
   /* 220px */
@@ -137,8 +114,7 @@
   .c6-23 .c6-2, .c6-23 .c6-3,
   .c6-34 .c6-3, .c6-34 .c6-4,
   .c6-45 .c6-4, .c6-45 .c6-5,
-  .c6-56 .c6-5,
-  .c6-56-mw .c6-5, .c6-56 .c6-6, .c6-56-mw .c6-6 {
+  .c6-56 .c6-5, .c6-56 .c6-6 {
     margin-left: 9.09097%; }
 
   /* Parent: half */
@@ -152,7 +128,7 @@
   .c6-123 .c6-23,
   .c6-234 .c6-23, .c6-234 .c6-34,
   .c6-345 .c6-34, .c6-345 .c6-45,
-  .c6-456 .c6-45, .c6-456 .c6-56, .c6-456 .c6-56-mw {
+  .c6-456 .c6-45, .c6-456 .c6-56 {
     margin-left: 5.88239%; }
 
   /* Parent: two thirds */
@@ -161,7 +137,7 @@
   .c6-3456 .c6-3, .c6-3456 .c6-4, .c6-3456 .c6-5, .c6-3456 .c6-6,
   .c6-1234 .c6-23, .c6-1234 .c6-34,
   .c6-2345 .c6-23, .c6-2345 .c6-34, .c6-2345 .c6-45,
-  .c6-3456 .c6-34, .c6-3456 .c6-45, .c6-3456 .c6-56, .c6-3456 .c6-56-mw,
+  .c6-3456 .c6-34, .c6-3456 .c6-45, .c6-3456 .c6-56,
   .c6-1234 .c6-234,
   .c6-2345 .c6-234, .c6-2345 .c6-345,
   .c6-3456 .c6-345, .c6-3456 .c6-456 {
@@ -180,7 +156,7 @@
   .c6-12345 .c6-234, .c6-12345 .c6-345,
   .c6-12345 .c6-2345,
   .c6-23456 .c6-2, .c6-23456 .c6-3, .c6-23456 .c6-4, .c6-23456 .c6-5, .c6-23456 .c6-6,
-  .c6-23456 .c6-23, .c6-23456 .c6-34, .c6-23456 .c6-45, .c6-23456 .c6-45, .c6-23456 .c6-56, .c6-23456 .c6-56-mw,
+  .c6-23456 .c6-23, .c6-23456 .c6-34, .c6-23456 .c6-45, .c6-23456 .c6-45, .c6-23456 .c6-56,
   .c6-23456 .c6-234, .c6-23456 .c6-345, .c6-23456 .c6-346,
   .c6-23456 .c6-3456 {
     margin-left: 3.4483%; }
@@ -194,7 +170,7 @@
 
   /* c6-xxxxx > 2/5 */
   .c6-12345 .c6-12, .c6-12345 .c6-23, .c6-12345 .c6-34, .c6-12345 .c6-45,
-  .c6-23456 .c6-2, .c6-23456 .c6-34, .c6-23456 .c6-45, .c6-23456 .c6-56, .c6-23456 .c6-56-mw {
+  .c6-23456 .c6-2, .c6-23456 .c6-34, .c6-23456 .c6-45, .c6-23456 .c6-56 {
     width: 37.93102%; }
 
   /* c6-xxxxx > 3/5 */
@@ -217,7 +193,7 @@
   /* c6-xxxx > 1/2 */
   .c6-1234 .c6-12, .c6-1234 .c6-23, .c6-1234 .c6-34,
   .c6-2345 .c6-23, .c6-2345 .c6-34, .c6-2345 .c6-45,
-  .c6-3456 .c6-34, .c6-3456 .c6-45, .c6-3456 .c6-56, .c6-3456 .c6-56-mw {
+  .c6-3456 .c6-34, .c6-3456 .c6-45, .c6-3456 .c6-56 {
     width: 47.82607%; }
 
   /* c6-xxxx > 3/4 */
@@ -238,7 +214,7 @@
   .c6-123 .c6-12, .c6-123 .c6-23,
   .c6-234 .c6-23, .c6-234 .c6-34,
   .c6-345 .c6-34, .c6-345 .c6-45,
-  .c6-456 .c6-45, .c6-456 .c6-56, .c6-456 .c6-56-mw {
+  .c6-456 .c6-45, .c6-456 .c6-56 {
     width: 64.70587%; }
 
   /* children of c6-xx */
@@ -247,8 +223,7 @@
   .c6-23 .c6-2, .c6-23 .c6-3, .c6-23 .c6-4,
   .c6-34 .c6-3, .c6-34 .c6-4, .c6-34 .c6-5,
   .c6-45 .c6-4, .c6-45 .c6-5, .c6-45 .c6-6,
-  .c6-56 .c6-4,
-  .c6-56-mw .c6-4, .c6-56 .c6-5, .c6-56-mw .c6-5, .c6-56 .c6-6, .c6-56-mw .c6-6 {
+  .c6-56 .c6-4, .c6-56 .c6-5, .c6-56 .c6-6 {
     width: 45.45452%; }
 
   /* children of c4-xxx */
@@ -271,7 +246,7 @@
 
   /* 100% */
   .c6-1 .c6-1, .c6-2 .c6-2, .c6-3 .c6-3, .c6-4 .c6-4, .c6-5 .c6-5, .c6-6 .c6-6,
-  .c6-12 .c6-12, .c6-23 .c6-23, .c6-34 .c6-34, .c6-45 .c6-45, .c6-56 .c6-56, .c6-56-mw .c6-56, .c6-56 .c6-56-mw, .c6-56-mw .c6-56-mw,
+  .c6-12 .c6-12, .c6-23 .c6-23, .c6-34 .c6-34, .c6-45 .c6-45, .c6-56 .c6-56,
   .c6-123 .c6-123, .c6-234 .c6-234, .c6-345 .c6-345, .c6-456 .c6-456,
   .c6-1234 .c6-1234, .c6-2345 .c6-2345, .c6-3456 .c6-3456,
   .c6-12345 .c6-12345, .c6-23456 .c6-23456,
@@ -301,7 +276,7 @@ so these classes can be used on non-block-level elements. */
 .c6-2 .c6-2, .c6-23 .c6-2, .c6-23 .c6-23, .c6-234 .c6-2, .c6-234 .c6-23, .c6-234 .c6-234, .c6-2345 .c6-2, .c6-2345 .c6-23, .c6-2345 .c6-234, .c6-2345 .c6-2345, .c6-23456 .c6-2, .c6-23456 .c6-23, .c6-23456 .c6-234, .c6-23456 .c6-2345, .c6-23456 .c6-23456,
 .c6-3 .c6-3, .c6-34 .c6-3, .c6-34 .c6-34, .c6-345 .c6-3, .c6-345 .c6-34, .c6-345 .c6-345, .c6-3456 .c6-3, .c6-3456 .c6-34, .c6-3456 .c6-345, .c6-3456 .c6-3456,
 .c6-4 .c6-4, .c6-45 .c6-4, .c6-45 .c6-45, .c6-456 .c6-4, .c6-456 .c6-45, .c6-456 .c6-456,
-.c6-5 .c6-5, .c6-56 .c6-5, .c6-56-mw .c6-5, .c6-56 .c6-56, .c6-56-mw .c6-56, .c6-56 .c6-56-mw, .c6-56-mw .c6-56-mw,
+.c6-5 .c6-5, .c6-56 .c6-5, .c6-56 .c6-56,
 .c6-6 .c6-6,
 .c4-2 .c4-2, .c4-23 .c4-2, .c4-23 .c4-23, .c4-234 .c4-2, .c4-234 .c4-23, .c4-234 .c4-234,
 .c4-3 .c4-3, .c4-34 .c4-3, .c4-34 .c4-34 {
@@ -312,16 +287,15 @@ so these classes can be used on non-block-level elements. */
 /* Row Clearfix
 Uses variation of Nicolas Gallagher's Micro Clearfix.
 http://nicolasgallagher.com/micro-clearfix-hack/ */
-.row:before, .row-mw:before,
-.row:after,
-.row-mw:after {
+.row:before,
+.row:after {
   content: "";
   display: table; }
 
-.row:after, .row-mw:after {
+.row:after {
   clear: both; }
 
-.row, .row-mw {
+.row {
   /* Just in case: make sure that rows clear outside floats. */
   clear: both;
   /* For IE 6/7 (trigger hasLayout) */
@@ -337,7 +311,7 @@ Example usage: .grid.hideoverflow. */
 .hideoverflow .c6-12, .hideoverflow .c6-123, .hideoverflow .c6-1234, .hideoverflow .c6-12345, .hideoverflow .c6-123456,
 .hideoverflow .c6-23, .hideoverflow .c6-234, .hideoverflow .c6-2345, .hideoverflow .c6-23456,
 .hideoverflow .c6-34, .hideoverflow .c6-345, .hideoverflow .c6-3456,
-.hideoverflow .c6-45, .hideoverflow .c6-456, .hideoverflow .c6-56, .hideoverflow .c6-56-mw,
+.hideoverflow .c6-45, .hideoverflow .c6-456, .hideoverflow .c6-56,
 .hideoverflow .c4-12, .hideoverflow .c4-123, .hideoverflow .c4-1234,
 .hideoverflow .c4-23, .hideoverflow .c4-234,
 .hideoverflow .c4-34 {

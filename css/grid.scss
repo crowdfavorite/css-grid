@@ -58,63 +58,34 @@ $margin: 2.85716%; /* 20px */
 
 /* Min-width Experiment (with fixed sidebar width */
 
-// This is only for a min-width element on the right. Just apply the usual classes
-// and tack on "-mw".
+// This is only for a min-width element on the right. See example.html for HTML implementation.
 
 @function strip-units($number) {
  	@return $number / ($number * 0 + 1);
 }
 
-$min-width: 320px;
-$third-cutoff: ($min-width * strip-units($third)/10px)+px;
+$side-col-width: 300px;
+$fixed-margin: 20px; // Cannot support fluid margin, see width property of .c6-1234-mw)
 
 .row-mw {
-	@extend .row;
-	padding-right: $min-width + 20px;
-	position: relative;
-
-	@media screen and (min-width: #{$third-cutoff}) {
-		padding-right: 0px;
-		width: 100%;
-		position: static;
-	}
-
-	@media screen and (max-width: 740px) {
-		padding: 0px;
-	}
+	float: left;
+	width: 100%;
 }
 
 .c6-1234-mw {
-	width: 100%;
-	float: left;
-	min-height: 1px;
-	display: inline;
-
-	@media screen and (min-width: #{$third-cutoff}) {
-		//normal c6.1234 attr's
-		width: $two-thirds;
-	}
-
-	@media screen and (max-width: 740px) {
-		width: 100%;
+	@media only screen and (min-width: 740px) {
+		margin-right: $side-col-width + $fixed-margin;
 	}
 }
 
 .c6-56-mw {
-	@extend .c6-56;
-	min-width: ($min-width - 20px);
-	position: absolute;
-	right: 0;
+	width: 100%;
+	float: left;
 
-	@media screen and (min-width: #{$third-cutoff}) {
-		//normal c6.1234 attr's
-		position: static;
-	}
-
-	@media screen and (max-width: 740px) {
-		width: 100%;
-		position: static;
-		float: left;
+	@media only screen and (min-width: 740px) {
+		float: right;
+		width: $side-col-width - 20px;;
+		margin-left: -100%;
 	}
 }
 
@@ -169,7 +140,7 @@ $third-cutoff: ($min-width * strip-units($third)/10px)+px;
 
 		.c4-12 .c4-2,
 		.c4-23 .c4-2, .c4-23 .c4-3,
-		.c4-34 .c4-3, .c4-34 .c4-4, 
+		.c4-34 .c4-3, .c4-34 .c4-4,
 		.c6-123 .c6-2, .c6-123 .c6-3,
 		.c6-234 .c6-2, .c6-234 .c6-3, .c6-234 .c6-4,
 		.c6-345 .c6-3, .c6-345 .c6-4, .c6-345 .c6-5,
@@ -196,9 +167,9 @@ $third-cutoff: ($min-width * strip-units($third)/10px)+px;
 
 	/* Parent: three quarters */
 
-		.c4-123 .c4-2, .c4-123 .c4-3, 
+		.c4-123 .c4-2, .c4-123 .c4-3,
 		.c4-234 .c4-2, .c4-234 .c4-3, .c4-234 .c4-4,
-		.c4-123 .c4-23, .c4-123 .c4-34, 
+		.c4-123 .c4-23, .c4-123 .c4-34,
 		.c4-234 .c4-23, .c4-234 .c4-34 {
 			margin-left: $three-quarters-margins;
 		}
