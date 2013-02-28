@@ -7,7 +7,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-	<title>Crowd Favorite CSS Grid</title>
+	<title>12 Column Grid</title>
 	<meta name="description" content="">
 	<meta name="author" content="Crowd Favorite">
 
@@ -16,417 +16,176 @@
 	<link rel="stylesheet" href="css/base.css" type="text/css" media="all">
 	<link rel="stylesheet" href="css/grid.css" type="text/css" media="all">
 	
+	<style>
+	
+		.placeholder {
+			background: #c0c0c0;
+			min-height: 36px;
+			margin-bottom: 18px;
+		}
+		.nested {
+			background: orange;
+			height: 36px;
+		}
+
+
+	</style>
+	
 </head>
 <body>
 
-<!-- about the grid -->
 	<div class="grid">
-		<h1 id="logo"><strong>CSS</strong>Grid</h1>
-		<p class="intro"><strong>CSS</strong>Grid is an easier-to-use grid. No <code>.first</code>, no <code>.last</code>, just nestable grid slots.</p>
-		<div class="row">
-			<div class="c6-12">
-				<h2>Purpose</h2>
-				<p><strong>CSS</strong>Grid is an effort to use less classes to achieve a comprehensive and flexible grid. Each element in the grid only requires one class. That means no <code>.first</code> or <code>.last</code> classes anywhere.</p>
-			</div>
-			<div class="c6-34">
-				<h2>Nesting</h2>
-				<p>Nesting is no problem. You can nest elements as deeply as you desire, and they'll just work. No special classes or elements required.</p>
-			</div>
-			<div class="c6-56">
-				<h2>Weight</h2>
-				<p><strong>CSS</strong>Grid means less junk in your <code>HTML</code> in favor of a little bit of extra <code>CSS</code>. Even then, <strong>Simple</strong>Grid weighs in at only 2.3kb with comments and readable styles.</p>
-			</div>
-		</div><!--.row-->
-		<div class="row">
-			<div class="c6-123">
-				<h2>How to Use It</h2>
-				<p>Using <strong>CSS</strong>Grid is easy. It starts with a wrapper which is called <code>.grid</code> in this example (but you could change it to whatever you'd like). Once you've got the wrapper in place, create <code>div</code>s with a class of <code>.row</code>. Inside each row, create a set of columns for content areas.</p>
-				<h2>License</h2>
-				<p><strong>CSS</strong>Grid is licensed under the <a href="http://opensource.org/licenses/mit-license.php">MIT License</a>.</p>
-			</div>
-			<div class="c6-456">
-				<h2>Columns</h2>
-				<p><strong>CSS</strong>Grid supports both 4 and 6 column structures. Each column class is prefixed with a c4 or c6 designator to indicate which column type you are using. Then it's a simple matter of choosing the slot position (or multiple slot positions) you wish to use (1-n).</p>
-				<p>Spanning columns is done by simply running numbers together, for example: <code>c4-12</code> would be a 1/2 wide column while <code>c6-56</code> would be a 1/3 wide column at the end of the 6 column row.</p>
-			</div>
-		</div><!--.row-->
-		<div class="row">
-			<div class="c6-1234">
-				<h2>Let's See It In Action</h2>
-				<p>Below is a sample grid to give you an idea of the slot structure, and how combining slots works to create a variety of layouts.</p>
-			</div>
-		</div><!-- .row -->
-
-<!-- example -->
-		<div class="example-grids">
-			<div class="row">
-				<div class="c6-1"> 
-					<p> 
-						.c6-1
-					</p> 
-				</div> 
-				<!-- end .c6-1 --> 
-	 
-				<div class="c6-2"> 
-					<p> 
-						.c6-2
-					</p> 
-				</div> 
-				<!-- end .c6-2 --> 
-				<div class="c6-3"> 
-					<p>.c6-3</p> 
-				</div> 
-				<!-- end .c6-3 --> 
-	 
-				<div class="c6-4"> 
-					<p> 
-						.c6-4
-					</p> 
-				</div> 
-				<!-- end .c6-4 --> 
-				<div class="c6-5"> 
-					<p> 
-						.c6-5
-					</p> 
-				</div> 
-				<!-- end .c6-5 --> 
-	 
-				<div class="c6-6"> 
-					<p> 
-						.c6-6
-					</p> 
-				</div> 
-				<!-- end .c6-6 -->
-			</div><!-- / .row -->
-
-			<div class="row">
-				<div class="c4-1"> 
-					<p> 
-						.c4-1
-					</p> 
-				</div> 
-				<!-- end .c4-1 --> 
-	 
-				<div class="c4-2"> 
-					<p> 
-						.c4-2
-					</p> 
-				</div> 
-				<!-- end .c4-1 -->	
-	 
-				<div class="c4-3"> 
-					<p> 
-						.c4-3
-					</p> 
-				</div> 
-				<!-- end .c4-3 --> 
-
-				<div class="c4-4"> 
-					<p> 
-						.c4-4
-					</p> 
-				</div> 
-				<!-- end .c4-4 --> 
-			</div><!-- /.row -->
-
-			<div class="row">
-				<div class="c6-1"> 
-					<p> 
-						.c6-1
-					</p> 
-				</div> 
-				<!-- end .c6-1 --> 
-	 
-				<div class="c6-23"> 
-					<p> 
-						.c6-23
-					</p> 
-				</div> 
-				<!-- end .c6-23 -->	
-	 
-				<div class="c4-3"> 
-					<p> 
-						.c4-3
-					</p> 
-				</div> 
-				<!-- end .c4-3 --> 
-
-				<div class="c4-4"> 
-					<p> 
-						.c4-4
-					</p> 
-				</div> 
-				<!-- end .c4-4 --> 
-			</div><!-- /.row -->
-
-			<div class="row">
-				<div class="c6-12"> 
-					<p> 
-						.c6-12
-					</p> 
-				</div> 
-				<!-- end .c6-12 --> 
-	 
-				<div class="c6-345"> 
-					<p> 
-						.c6-345
-					</p> 
-				</div> 
-				<!-- end .c6-345 -->
-
-				<div class="c6-6"> 
-					<p> 
-						.c6-6
-					</p> 
-				</div> 
-				<!-- end .c6-6 -->	
-			</div><!-- /.row -->
-
-			<div class="row">
-				<div class="c6-1234"> 
-					<p> 
-						.c6-1234
-					</p> 
-				</div> 
-				<!-- end .c6-1234 --> 
-	 
-				<div class="c6-56"> 
-					<p> 
-						.c6-56
-					</p> 
-				</div> 
-				<!-- end .c6-56 --> 
-			</div><!-- /.row -->
-
-			<div class="row">
-				<div class="c6-1"> 
-					<p> 
-						.c6-1
-					</p> 
-				</div> 
-				<!-- end .c6-1 --> 
-	 
-				<div class="c6-23456"> 
-					<p> 
-						.c6-23456
-					</p> 
-				</div> 
-				<!-- end .c6-23456 --> 
-			</div><!-- /.row -->
-			<div class="row">
-				<div class="c6-123456">
-					<p>
-						.c4-123456
-					</p>
-				</div>
-			</div><!-- /.row -->
-			<div class="row">
-				<div class="c4-12"> 
-					<p> 
-						.c4-12
-					</p> 
-				</div> 
-				<!-- end .c4-12 --> 
-	 
-				<div class="c4-34"> 
-					<p> 
-						.c4-34
-					</p> 
-				</div> 
-				<!-- end .c4-34 --> 
-			</div><!-- /.row -->
-
-			<div class="row">
-				<div class="c4-1"> 
-					<p> 
-						.c4-1
-					</p> 
-				</div> 
-				<!-- end .c4-1 --> 
-	 
-				<div class="c4-23"> 
-					<p> 
-						.c4-23
-					</p> 
-				</div> 
-				<!-- end .c4-23 -->
-
-				<div class="c4-4"> 
-					<p> 
-						.c4-4
-					</p> 
-				</div> 
-				<!-- end .c4-4 -->
-			</div><!-- /.row -->
-
-			<div class="row">
-				<div class="c4-123"> 
-					<p> 
-						.c4-123
-					</p> 
-				</div> 
-				<!-- end .c4-1 --> 
-	 
-				<div class="c4-4"> 
-					<p> 
-						.c4-4
-					</p> 
-				</div> 
-				<!-- end .c4-4 -->
-			</div><!-- /.row -->
-			<div class="row">
-				<div class="c41234">
-					<p>
-						.c4-1234
-					</p>
-				</div>
-			</div><!-- /.row -->
-			<div class="row">
-				<div class="c4-123"> 
-					<p> 
-						.c4-123
-					</p>
-					<div class="row">
-						<div class="c4-1">
-							<p>
-								.c4-1
-							</p>
-						</div>
-						<div class="c4-23">
-							<p>
-								.c4-23
-							</p>
-						</div>
-					</div>
-				</div> 
-				<!-- end .c4-1 --> 
-	 
-				<div class="c4-4"> 
-					<p> 
-						.c4-4
-					</p> 
-				</div> 
-				<!-- end .c4-4 -->
-			</div><!-- /.row -->
-			<div class="row">
-				<div class="c6-1"> 
-					<p> 
-						.c6-1
-					</p> 
-				</div> 
-				<!-- end .c6-1 -->
-		
-				<div class="c6-234"> 
-					<p> 
-						.c6-234
-					</p>
-					<div class="row">
-						<div class="c6-2">
-							<p>
-								.c6-2
-							</p>
-							<div class="row">
-								<div class="c6-2">
-									<p>
-										.c6-2
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="c6-34">
-							<p>
-								.c6-34
-							</p>
-							<div class="row">
-								<div class="c6-3">
-									<p>
-										.c6-3
-									</p>
-								</div>
-								<div class="c6-4">
-									<p>
-										.c6-4
-									</p>
-								</div>
-							</div>
-							<div class="row">
-								<div class="c6-34">
-									<p>
-										.c6-34
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div> 
-				<!-- end .c6-234 -->
-
-				<div class="c6-56"> 
-					<p> 
-						.c6-56
-					</p>
-					<div class="row">
-						<div class="c6-5">
-							<p>
-								.c6-5
-							</p>
-						</div>
-						<div class="c6-6">
-							<p>
-								.c6-6
-							</p>
-						</div>
-					</div>
-				</div> 
-				<!-- end .c6-6 -->	
-			</div><!-- /.row -->
-	
-			<div class="row">
-				<div class="c4-1"> 
-					<p> 
-						.c4-1
-					</p> 
-				</div> 
-				<!-- end .c4-1 -->
-		
-				<div class="c4-23"> 
-					<p> 
-						.c4-23
-					</p>
-					<div class="row">
-						<div class="c4-2"> 
-							<p> 
-								.c4-2
-							</p> 
-						</div> 
-						<!-- end .c4-2 -->
-						<div class="c4-3"> 
-							<p> 
-								.c4-3
-							</p> 
-						</div> 
-						<!-- end .c4-3 -->
-					</div><!-- / .row -->
-				</div> 
-				<!-- end .c4-1 --> 
-	 
-				<div class="c4-4"> 
-					<p> 
-						.c4-4
-					</p> 
-				</div> 
-				<!-- end .c4-4 -->
-			</div><!-- /.row -->
-		</div><!-- / .example-grids -->
 
 		<div class="row">
-			<div class="c4-1234">
-				<p>Copyright &copy; 2011 <a href="http://crowdfavorite.com">Crowd Favorite</a>.</p>
+			<div class="c1 placeholder"></div>
+			<div class="c2 placeholder"></div>
+			<div class="c3 placeholder"></div>
+			<div class="c4 placeholder"></div>
+			<div class="c5 placeholder"></div>
+			<div class="c6 placeholder"></div>
+			<div class="c7 placeholder"></div>
+			<div class="c8 placeholder"></div>
+			<div class="c9 placeholder"></div>
+			<div class="c10 placeholder"></div>
+			<div class="c12 placeholder"></div>
+			<div class="c12 placeholder"></div>
+		</div>
+
+		<div class="row">
+			<div class="c1-2 placeholder">
+				<div class="c1 nested"></div>
+				<div class="c2 nested"></div>
+			</div>
+			<div class="c3-4 placeholder"></div>
+			<div class="c5-6 placeholder"></div>
+			<div class="c7-8 placeholder"></div>
+			<div class="c9-10 placeholder">
+				<div class="c9 nested"></div>
+				<div class="c10 nested"></div>
+			</div>
+			<div class="c11-12 placeholder">
+				<div class="c11-12 nested"></div>
 			</div>
 		</div>
 
-	</div><!-- / .grid -->
+		<div class="row">
+			<div class="c1-3 placeholder"></div>
+			<div class="c4-6 placeholder">
+				<div class="c4-5 nested"></div>
+			</div>
+			<div class="c7-9 placeholder"></div>
+			<div class="c10-12 placeholder"></div>
+		</div>
+
+		<div class="row">
+			<div class="c1-4 placeholder"></div>
+			<div class="c5-8 placeholder"></div>
+			<div class="c9-12 placeholder"></div>
+		</div>
+
+		<div class="row">
+			<div class="c1 placeholder"></div>
+			<div class="c2-4 placeholder"></div>
+			<div class="c5-7 placeholder"></div>
+			<div class="c8-10 placeholder">
+				<div class="c8 nested"></div>
+				<div class="c9 nested"></div>
+				<div class="c10 nested"></div>
+			</div>
+			<div class="c11 placeholder"></div>
+			<div class="c12 placeholder">
+				<div class="c12 nested"></div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="c1 placeholder"></div>
+			<div class="c2-6 placeholder">
+				<div class="c2-4 nested"></div>
+				<div class="c5 nested"></div>
+				<div class="c6 nested"></div>
+			</div>
+			<div class="c7-11 placeholder">
+				<div class="c7-8 nested"></div>
+				<div class="c9-10 nested"></div>
+				<div class="c11 nested"></div>
+			</div>
+			<div class="c12 placeholder"></div>
+		</div>
+
+		<div class="row">
+			<div class="c1 placeholder"></div>
+			<div class="c2 placeholder"></div>
+			<div class="c3-6 placeholder"></div>
+			<div class="c7-10 placeholder"></div>
+			<div class="c11 placeholder"></div>
+			<div class="c12 placeholder"></div>
+		</div>
+
+		<div class="row">
+			<div class="c1 placeholder"></div>
+			<div class="c2-12 placeholder"></div>
+		</div>
+
+		<div class="row">
+			<div class="c1-2 placeholder"></div>
+			<div class="c3-12 placeholder"></div>
+		</div>
+
+		<div class="row">
+			<div class="c1-3 placeholder"></div>
+			<div class="c4-12 placeholder"></div>
+		</div>
+
+		<div class="row">
+			<div class="c1-4 placeholder"></div>
+			<div class="c5-12 placeholder"></div>
+		</div>
+
+		<div class="row">
+			<div class="c1-5 placeholder"></div>
+			<div class="c6-12 placeholder"></div>
+		</div>
+
+		<div class="row">
+			<div class="c1-6 placeholder"></div>
+			<div class="c7-12 placeholder"></div>
+		</div>
+
+		<div class="row">
+			<div class="c1-7 placeholder"></div>
+			<div class="c8-12 placeholder"></div>
+		</div>
+
+		<div class="row">
+			<div class="c1-8 placeholder"></div>
+			<div class="c9-12 placeholder"></div>
+		</div>
+
+		<div class="row">
+			<div class="c1-9 placeholder"></div>
+			<div class="c10-12 placeholder"></div>
+		</div>
+
+		<div class="row">
+			<div class="c1-10 placeholder"></div>
+			<div class="c11-12 placeholder"></div>
+		</div>
+
+		<div class="row">
+			<div class="c1-11 placeholder"></div>
+			<div class="c12 placeholder"></div>
+		</div>
+
+		<div class="row">
+			<div class="c1-3 placeholder"></div>
+			<div class="c4-6 placeholder"></div>
+			<div class="c7-9 placeholder"></div>
+			<div class="c10-12 placeholder"></div>
+		</div>
 
 
+
+	</div>
 </body>
 </html>

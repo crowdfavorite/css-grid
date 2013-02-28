@@ -62,16 +62,6 @@ table { border-collapse: collapse; border-spacing: 0; }
 td { vertical-align: top; }
 
 
-/* ==|== primary styles =====================================================
-   Author: 
-   ========================================================================== */
-/** Example Grid Preview Styles
--------------------------------------------------- */
-.example-grids p {
-	border: 1px solid #999;
-	padding: 1em;
-}
-
 
 /* ==|== non-semantic helper classes ======================================== */
 .ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
