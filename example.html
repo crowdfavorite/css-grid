@@ -12,13 +12,31 @@
 	<meta name="author" content="Crowd Favorite">
 
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	
+
 	<link rel="stylesheet" href="css/base.css" type="text/css" media="all">
 	<link rel="stylesheet" href="css/grid.css" type="text/css" media="all">
 
+	<link rel="stylesheet" href="overlay/overlay.css" type="text/css" media="all">
+	<!-- <script>
+
+	// Overlay
+	var overlay = document.getElementById("overlay");
+	if(!overlay) {
+		var overlay = "<style>#overlay {background-color:rgba(255, 142, 142, 0.23); padding-top: 0; padding-bottom: 0; position: fixed; top: 0; bottom: 0; left: 0; right: 0; height: 100%; } .overlay-row {height: 100%; } .c-overlay {background-color: rgba(75, 187, 22, 0.3); height: 100%; }</style><div id='overlay' class='grid'> <div class='overlay-row row'> <div class='c1 c-overlay'></div> <div class='c2 c-overlay'></div> <div class='c3 c-overlay'></div> <div class='c4 c-overlay'></div> <div class='c5 c-overlay'></div> <div class='c6 c-overlay'></div> <div class='c7 c-overlay'></div> <div class='c8 c-overlay'></div> <div class='c9 c-overlay'></div> <div class='c10 c-overlay'></div> <div class='c11 c-overlay'></div> <div class='c12 c-overlay'></div> </div> </div>";
+		document.body.innerHTML += overlay;
+	}
+	else {
+		document.body.removeChild(overlay);
+	}
+
+	// Bookmarklet (using crunchinator @ http://ted.mielczarek.org/code/mozilla/bookmarklet.html)
+
+	// javascript:(function()%7Bvar%20overlay%3Ddocument.getElementById(%22overlay%22)%3Bif(!overlay)%7Bvar%20overlay%3D%22%3Cstyle%3E%23overlay%20%7Bbackground-color:rgba(255,%20142,%20142,%200.23)%3B%20padding-top:%200%3B%20padding-bottom:%200%3B%20position:%20fixed%3B%20top:%200%3B%20bottom:%200%3B%20left:%200%3B%20right:%200%3B%20height:%20100%25%3B%20%7D%20.overlay-row%20%7Bheight:%20100%25%3B%20%7D%20.c-overlay%20%7Bbackground-color:%20rgba(75,%20187,%2022,%200.3)%3B%20height:%20100%25%3B%20%7D%3C/style%3E%3Cdiv%20id%3D%27overlay%27%20class%3D%27grid%27%3E%20%3Cdiv%20class%3D%27overlay-row%20row%27%3E%20%3Cdiv%20class%3D%27c1%20c-overlay%27%3E%3C/div%3E%20%3Cdiv%20class%3D%27c2%20c-overlay%27%3E%3C/div%3E%20%3Cdiv%20class%3D%27c3%20c-overlay%27%3E%3C/div%3E%20%3Cdiv%20class%3D%27c4%20c-overlay%27%3E%3C/div%3E%20%3Cdiv%20class%3D%27c5%20c-overlay%27%3E%3C/div%3E%20%3Cdiv%20class%3D%27c6%20c-overlay%27%3E%3C/div%3E%20%3Cdiv%20class%3D%27c7%20c-overlay%27%3E%3C/div%3E%20%3Cdiv%20class%3D%27c8%20c-overlay%27%3E%3C/div%3E%20%3Cdiv%20class%3D%27c9%20c-overlay%27%3E%3C/div%3E%20%3Cdiv%20class%3D%27c10%20c-overlay%27%3E%3C/div%3E%20%3Cdiv%20class%3D%27c11%20c-overlay%27%3E%3C/div%3E%20%3Cdiv%20class%3D%27c12%20c-overlay%27%3E%3C/div%3E%20%3C/div%3E%20%3C/div%3E%22%3Bdocument.body.innerHTML%2B%3Doverlay%3B%7Delse%7Bdocument.body.removeChild(overlay)%3B%7D%7D)()%3B
+
+	</script> -->
+
 </head>
 <body>
-
 	<div class="grid">
 
 		<h1><b>CSS</b>Grid</h1>
@@ -55,7 +73,7 @@
 			</div>
 
 		</div>
-			
+
 		<hr />
 
 		<div class="row">
