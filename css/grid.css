@@ -285,7 +285,7 @@ http://nicolasgallagher.com/micro-offsetfix-hack/ */
 	display:table;
 }
 .row:after {
-	clear;
+	clear:both;
 }
 .row {
 	/* Just in case: make sure that rows offset outside floats. */
