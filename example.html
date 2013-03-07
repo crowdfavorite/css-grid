@@ -16,8 +16,7 @@
 	<link rel="stylesheet" href="css/base.css" type="text/css" media="all">
 	<link rel="stylesheet" href="css/grid.css" type="text/css" media="all">
 
-	<link rel="stylesheet" href="overlay/overlay.css" type="text/css" media="all">
-	<!-- <script>
+	<script>
 
 	// Overlay
 	var overlay = document.getElementById("overlay");
@@ -33,16 +32,18 @@
 
 	// javascript:(function()%7Bvar%20overlay%3Ddocument.getElementById(%22overlay%22)%3Bif(!overlay)%7Bvar%20overlay%3D%22%3Cstyle%3E%23overlay%20%7Bbackground-color:rgba(255,%20142,%20142,%200.23)%3B%20padding-top:%200%3B%20padding-bottom:%200%3B%20position:%20fixed%3B%20top:%200%3B%20bottom:%200%3B%20left:%200%3B%20right:%200%3B%20height:%20100%25%3B%20%7D%20.overlay-row%20%7Bheight:%20100%25%3B%20%7D%20.c-overlay%20%7Bbackground-color:%20rgba(75,%20187,%2022,%200.3)%3B%20height:%20100%25%3B%20%7D%3C/style%3E%3Cdiv%20id%3D%27overlay%27%20class%3D%27grid%27%3E%20%3Cdiv%20class%3D%27overlay-row%20row%27%3E%20%3Cdiv%20class%3D%27c1%20c-overlay%27%3E%3C/div%3E%20%3Cdiv%20class%3D%27c2%20c-overlay%27%3E%3C/div%3E%20%3Cdiv%20class%3D%27c3%20c-overlay%27%3E%3C/div%3E%20%3Cdiv%20class%3D%27c4%20c-overlay%27%3E%3C/div%3E%20%3Cdiv%20class%3D%27c5%20c-overlay%27%3E%3C/div%3E%20%3Cdiv%20class%3D%27c6%20c-overlay%27%3E%3C/div%3E%20%3Cdiv%20class%3D%27c7%20c-overlay%27%3E%3C/div%3E%20%3Cdiv%20class%3D%27c8%20c-overlay%27%3E%3C/div%3E%20%3Cdiv%20class%3D%27c9%20c-overlay%27%3E%3C/div%3E%20%3Cdiv%20class%3D%27c10%20c-overlay%27%3E%3C/div%3E%20%3Cdiv%20class%3D%27c11%20c-overlay%27%3E%3C/div%3E%20%3Cdiv%20class%3D%27c12%20c-overlay%27%3E%3C/div%3E%20%3C/div%3E%20%3C/div%3E%22%3Bdocument.body.innerHTML%2B%3Doverlay%3B%7Delse%7Bdocument.body.removeChild(overlay)%3B%7D%7D)()%3B
 
-	</script> -->
+	</script> 
 
 </head>
 <body>
+
 	<div class="grid">
 
 		<h1><b>CSS</b>Grid</h1>
 		<p><b>CSS</b>Grid is an easier-to-use grid. No <code>.first</code>, no <code>.last</code>, just nestable grid slots.</p>
 
 		<div class="row">
+
 			<div class="c1-4">
 				<h2>Purpose</h2>
 				<p><b>CSS</b>Grid is an effort to use less classes to achieve a comprehensive and flexible grid. Each element in the grid only requires one class. That means no <code>.first</code> or <code>.last</code> classes anywhere.</p>
@@ -73,17 +74,98 @@
 			</div>
 
 		</div>
-
-		<hr />
+			
 
 		<div class="row">
 			<div class="c1-6">
 				<h2>Let’s See It In Action</h2>
 				<p>Below is a sample grid to give you an idea of the slot structure, and how combining slots works to create a variety of layouts. Those sections in blue are nested. Darker blue divs are nested one level and lighter blue are two levels deep.</p>
+				<br/><br/>
 			</div>
 		</div>
 
-		<br/>
+
+
+		<div class="row">
+			<div class="c1-3 placeholder">
+				<div class="c1-3 nested">
+					<div class="c1-2 nested-2x">.c1-2</div>
+					<div class="c3 nested-2x">.c3</div>
+				</div>
+			</div>
+			<div class="c5-6 placeholder offset1">
+				<div class="c5 nested">.c5</div>
+			</div>
+			<div class="c9-12 placeholder offset2">.c9-12</div>
+		</div>
+
+		<div class="row">
+			<div class="c2-4 placeholder offset1">.c2-4</div>
+			<div class="c7 placeholder offset2">.c7</div>
+			<div class="c10-12 placeholder offset2">.c10-12</div>
+		</div>
+
+		<div class="row">
+			<div class="c4 placeholder offset3">.c4</div>
+			<div class="c8-9 placeholder offset3">.c8-9</div>
+			<div class="c12 placeholder offset2">.c12</div>
+		</div>
+
+		<div class="row">
+			<div class="c1 placeholder">.c1</div>
+			<div class="c3-5 placeholder offset1">.c3-5</div>
+			<div class="c7 placeholder offset1">.c7</div>
+			<div class="c9-12 placeholder offset1">.c9-12</div>
+		</div>
+
+
+
+		<div class="row">
+			<div class="c2-12 placeholder offset1">.c2-12</div>
+		</div>
+
+		<div class="row">
+			<div class="c3-12 placeholder offset2">.c3-12</div>
+		</div>
+
+		<div class="row">
+			<div class="c4-12 placeholder offset3">.c4-12</div>
+		</div>
+
+		<div class="row">
+			<div class="c5-12 placeholder offset4">.c5-12</div>
+		</div>
+
+		<div class="row">
+			<div class="c6-12 placeholder offset5">.c6-12</div>
+		</div>
+
+		<div class="row">
+			<div class="c7-12 placeholder offset6">
+				<div class="c8-10 nested offset1">.c8-10</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="c8-12 placeholder offset7">.c8-12</div>
+		</div>
+
+		<div class="row">
+			<div class="c9-12 placeholder offset8">.c9-12</div>
+		</div>
+
+		<div class="row">
+			<div class="c10-12 placeholder offset9">.c10-12</div>
+		</div>
+
+		<div class="row">
+			<div class="c11-12 placeholder offset10">.c11-12</div>
+		</div>
+
+		<div class="row">
+			<div class="c12 placeholder offset11">.c12</div>
+		</div>
+
 
 
 		<div class="row">
