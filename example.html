@@ -32,7 +32,7 @@
 			</div>
 			<div class="c5-8">
 				<h2>Nesting</h2>
-				<p>Nesting is no problem. You can nest elements as deeply as you desire, and they'll just work. No special classes or elements required.</p>
+				<p>Nesting is no problem. You can nest elements as deeply as you desire, and they'll just work. Just wrap each level of your nested content in a <code>.row</code> class and you’ll be good to go.</p>
 			</div>
 			<div class="c9-12">
 				<h2>Weight</h2>
@@ -85,29 +85,39 @@
 
 		<div class="row">
 			<div class="c1-2 placeholder">
-				<div class="c1 nested">.c1</div>
-				<div class="c2 nested">.c2</div>
+				<div class="row">
+					<div class="c1 nested">.c1</div>
+					<div class="c2 nested">.c2</div>
+				</div>
 			</div>
 			<div class="c3-4 placeholder">.c3-4</div>
 			<div class="c5-6 placeholder">.c5-6</div>
 			<div class="c7-8 placeholder">.c7-8</div>
 			<div class="c9-10 placeholder">
-				<div class="c9 nested">.c9</div>
-				<div class="c10 nested">.c10</div>
+				<div class="row">
+					<div class="c9 nested">.c9</div>
+					<div class="c10 nested">.c10</div>
+				</div>
 			</div>
 			<div class="c11-12 placeholder">
-				<div class="c11-12 nested">.c11-12</div>
+				<div class="row">
+					<div class="c11-12 nested">.c11-12</div>
+				</div>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="c1-3 placeholder">.c1-3</div>
 			<div class="c4-6 placeholder">
-				<div class="c4-5 nested">
-					<div class="c4 nested-2x">.c4</div>
-					<div class="c5 nested-2x">.c5</div>
+				<div class="row">
+					<div class="c4-5 nested">
+						<div class="row">
+							<div class="c4 nested-2x">.c4</div>
+							<div class="c5 nested-2x">.c5</div>
+						</div>
+					</div>
+					<div class="c6 nested">.c6</div>
 				</div>
-				<div class="c6 nested">.c6</div>
 			</div>
 			<div class="c7-9 placeholder">.c7-9</div>
 			<div class="c10-12 placeholder">.c10-12</div>
@@ -124,27 +134,35 @@
 			<div class="c2-4 placeholder">.c2-4</div>
 			<div class="c5-7 placeholder">.c5-7</div>
 			<div class="c8-10 placeholder">
-				<div class="c8 nested">.c8</div>
-				<div class="c9 nested">.c9</div>
-				<div class="c10 nested">.c10</div>
+				<div class="row">
+					<div class="c8 nested">.c8</div>
+					<div class="c9 nested">.c9</div>
+					<div class="c10 nested">.c10</div>
+				</div>
 			</div>
 			<div class="c11 placeholder">.c11</div>
 			<div class="c12 placeholder">
-				<div class="c12 nested">.c12</div>
+				<div class="row">
+					<div class="c12 nested">.c12</div>
+				</div>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="c1 placeholder">.c1</div>
 			<div class="c2-6 placeholder">
-				<div class="c2-4 nested">.c2-4</div>
-				<div class="c5 nested">.c5</div>
-				<div class="c6 nested">.c6</div>
+				<div class="row">
+					<div class="c2-4 nested">.c2-4</div>
+					<div class="c5 nested">.c5</div>
+					<div class="c6 nested">.c6</div>
+				</div>
 			</div>
 			<div class="c7-11 placeholder">
-				<div class="c7-8 nested">.c7-8</div>
-				<div class="c9-10 nested">.c9-10</div>
-				<div class="c11 nested">.c11</div>
+				<div class="row">
+					<div class="c7-8 nested">.c7-8</div>
+					<div class="c9-10 nested">.c9-10</div>
+					<div class="c11 nested">.c11</div>
+				</div>
 			</div>
 			<div class="c12 placeholder">.c12</div>
 		</div>
@@ -166,14 +184,18 @@
 		<div class="row">
 			<div class="c1-2 placeholder">.c1-2</div>
 			<div class="c3-12 placeholder">
-				<div class="c3-10 nested">
-					<div class="c3-4 nested-2x">.c3-4</div>
-					<div class="c5-8 nested-2x">.c5-8</div>
-					<div class="c9 nested-2x">.c9</div>
-					<div class="c10 nested-2x">.c10</div>
+				<div class="row">
+					<div class="c3-10 nested">
+						<div class="row">
+							<div class="c3-4 nested-2x">.c3-4</div>
+							<div class="c5-8 nested-2x">.c5-8</div>
+							<div class="c9 nested-2x">.c9</div>
+							<div class="c10 nested-2x">.c10</div>
+						</div>
+					</div>
+					<div class="c11 nested">.c11</div>
+					<div class="c12 nested">.c12</div>
 				</div>
-				<div class="c11 nested">.c11</div>
-				<div class="c12 nested">.c12</div>
 			</div>
 		</div>
 
@@ -234,13 +256,19 @@
 
 		<div class="row">
 			<div class="c1-3 placeholder">
-				<div class="c1-3 nested">
-					<div class="c1-2 nested-2x">.c1-2</div>
-					<div class="c3 nested-2x">.c3</div>
+				<div class="row">
+					<div class="c1-3 nested">
+						<div class="row">
+							<div class="c1-2 nested-2x">.c1-2</div>
+							<div class="c3 nested-2x">.c3</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="c5-6 placeholder offset1">
-				<div class="c5 nested">.c5</div>
+				<div class="row">
+					<div class="c5 nested">.c5</div>
+				</div>
 			</div>
 			<div class="c9-12 placeholder offset2">.c9-12</div>
 		</div>
@@ -259,12 +287,14 @@
 
 		<div class="row">
 			<div class="c1 placeholder">.c1</div>
-			<div class="c3-5 placeholder offset1">.c3-5</div>
+			<div class="c3-5 placeholder offset1">
+				<div class="row">
+					<div class="c4-5 offset1 nested">.c4-5</div>
+				</div>
+			</div>
 			<div class="c7 placeholder offset1">.c7</div>
 			<div class="c9-12 placeholder offset1">.c9-12</div>
 		</div>
-
-
 
 		<div class="row">
 			<div class="c2-12 placeholder offset1">.c2-12</div>
@@ -284,14 +314,18 @@
 
 		<div class="row">
 			<div class="c6-12 placeholder offset5">
-				<div class="c6-7 nested">.c6-7</div>
-				<div class="c10-12 nested offset2">.c10-12</div>
+				<div class="row">
+					<div class="c7 nested offset1">.c7</div>
+					<div class="c10-12 nested offset2">.c10-12</div>
+				</div>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="c7-12 placeholder offset6">
-				<div class="c8-10 nested offset1">.c8-10</div>
+				<div class="row">
+					<div class="c8-10 nested offset1">.c8-10</div>
+				</div>
 			</div>
 		</div>
 

@@ -254,7 +254,7 @@
 
 
 /* Zeroing out leftmost nested .unit margins */
-[class*=c1] [class*=c1],
+/*[class*=c1] [class*=c1],
 [class*=c2] [class*=c2],
 [class*=c3] [class*=c3],
 [class*=c4] [class*=c4],
@@ -268,6 +268,24 @@
 .c12 .c12 {
 	margin-left: 0;
 }
+*/
+
+/*
+This doesn’t account for offsets
+[class*=c1] div:first-child,
+[class*=c2] div:first-child,
+[class*=c3] div:first-child,
+[class*=c4] div:first-child,
+[class*=c5] div:first-child,
+[class*=c6] div:first-child,
+[class*=c7] div:first-child,
+[class*=c8] div:first-child,
+[class*=c9] div:first-child,
+[class*=c10] div:first-child,
+[class*=c11] div:first-child,
+.c12 div:first-child {
+	margin-left: 0;
+}*/
 
 
 
