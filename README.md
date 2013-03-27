@@ -18,31 +18,31 @@ Spanning columns is done by simply running numbers together, for example: c1-3 w
 
 Nesting is no problem. You can nest elements as deeply as you desire, and they'll just work. Here is an example of a nested content block that spans two columns.
 
-<div class="row">
-  <div class="c1-12">
-    <div class"c1-2"></div>
-  </div>
-</div>
+	<div class="row">
+		<div class="c1-12">
+			<div class"c1-2"></div>
+		</div>
+	</div>
 
 
 ### Offsets 
 
 This latest version of CSSGrid introduces offsets. Previously to offset a content block from the left side, you would need to place an empty div for that column. For example:
 
-<div class="row">
-  <div class="c1"></div>
-  <div class"c2-12">
-    My content here.
-  </div>
-</div>
+	<div class="row">
+		<div class="c1"></div>
+			<div class"c2-12">
+    		My content here.
+		  </div>
+	</div>
 
 would yield an eleven column block of content offset by one column on the left. This syntax still works, but if you’d prefer to keep your markup clear of empty divs, this new method with offsets will achieve the same results:
 
-<div class="row">
-  <div class"c2-12 offset1">
-    My content here.
+	<div class="row">
+		<div class"c2-12 offset1">
+			My content here.
+		</div>
 	</div>
-</div>
 
 Simply append the offset class with the number of columns to the left you’re wanting to offset. n.b. Nested offsets are not supported.
 
