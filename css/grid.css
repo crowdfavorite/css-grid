@@ -18,9 +18,6 @@
 	max-width: 100%;
 }
 
-
-
-
 /* 	Default Desktop/Tablet Grid
 	Works fine with older browsers that don't support media queries. */
 	.grid {
@@ -36,7 +33,8 @@
 	.c1-8,.c2-9,.c3-10,.c4-11,.c5-12,
 	.c1-9,.c2-10,.c3-11,.c4-12,
 	.c1-10,.c2-11,.c3-12,
-	.c1-11,.c2-12	{
+	.c1-11,.c2-12,
+	.c1-12	{
 		margin-left: 20px;
 		display: inline;
 		float: left;
@@ -79,16 +77,6 @@
 /* 	12/12 */
 	.c1-12 { width: 1024px; }		
 
-
-/* Full-width  */
-.c1-12 {
-	clear: both;
-	display: block;
-	min-height: 1px;
-	width: auto;
-}
-
-
 /* 	Medium Sized Grid
 	Tablet sized columns. */
 @media only screen and (min-width: 760px) and (max-width: 1023px) {
@@ -106,7 +94,8 @@
 	.c1-8,.c2-9,.c3-10,.c4-11,.c5-12,
 	.c1-9,.c2-10,.c3-11,.c4-12,
 	.c1-10,.c2-11,.c3-12,
-	.c1-11,.c2-12	{
+	.c1-11,.c2-12,
+	.c1-12	{
 		display: inline; /* IE6/IE7 double-margin float bug fix */
 		float: left;
 		margin-left: 20px;
@@ -173,7 +162,8 @@
 	.c1-8,.c2-9,.c3-10,.c4-11,.c5-12,
 	.c1-9,.c2-10,.c3-11,.c4-12,
 	.c1-10,.c2-11,.c3-12,
-	.c1-11,.c2-12	{
+	.c1-11,.c2-12,
+	.c1-12	{
 		margin-left: 20px;
 		display: inline;
 		float: left;
@@ -218,7 +208,6 @@
 
 }
 
-
 /* 	Accounts for extra margin on first column
 	This value should change a negative margin of whatever your gutter width is. */
 .row {
@@ -240,7 +229,8 @@
 	.c1-8,.c2-9,.c3-10,.c4-11,.c5-12,
 	.c1-9,.c2-10,.c3-11,.c4-12,
 	.c1-10,.c2-11,.c3-12,
-	.c1-11,.c2-12	{
+	.c1-11,.c2-12,
+	.c1-12	{
 		display: block;
 		float: none;
 		margin-left: 0;
@@ -250,8 +240,6 @@
 		margin-left: 0;
 	}
 }
-
-
 
 /* Zeroing out leftmost nested .unit margins */
 [class*=c1] [class*=c1],
@@ -270,9 +258,12 @@
 	margin-left: 0;
 }
 
-
-
-
+/* Full-width  */
+.c1-12 {
+	clear: both;
+	display: block;
+	min-height: 1px;
+}
 
 /** grid utilities
  -------------------------------------------------- */
