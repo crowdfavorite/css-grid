@@ -75,11 +75,11 @@
 	.c1-11,.c2-12 { width: 937px; }
 	.offset11 { margin-left: 977px; }
 /* 	12/12 */
-	.c1-12 { width: 1024px; }		
+	.c1-12 { width: 1024px; }
 
 /* 	Medium Sized Grid
 	Tablet sized columns. */
-@media only screen and (min-width: 760px) and (max-width: 1023px) {
+@media only screen and (min-width: 760px) and (max-width: 1047px) {
 	.grid {
 		width: 700px;
 		padding: 24px;
@@ -139,14 +139,14 @@
 	.c1-11,.c2-12 { width: 640px; }
 	.offset11 { margin-left: 680px; }
 /* 	12/12 */
-	.c1-12 { width: 700px; }	
+	.c1-12 { width: 700px; }
 }
 
 
 /* 	Large Desktop Grid
 	Very wide columns for large monitors. */
 
-@media only screen and (min-width: 1410px) {
+@media only screen and (min-width: 1430px) {
 	.grid {
 		width: 1420px;
 		padding-left: 0;
@@ -204,7 +204,7 @@
 	.c1-11,.c2-12 { width: 1300px; }
 	.offset11 { margin-left: 1340px; }
 /* 	12/12 */
-	.c1-12 { width: 1420px; }		
+	.c1-12 { width: 1420px; }
 
 }
 
@@ -253,7 +253,7 @@
 [class*=c9] [class*=c9],
 [class*=c10] [class*=c10],
 [class*=c11] [class*=c11],
-.c12 .c12, 
+.c12 .c12,
 .row .row {
 	margin-left: 0;
 }
