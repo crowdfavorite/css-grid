@@ -22,7 +22,7 @@ The following is bookmarklet code to help with front end development using the 1
 	// Overlay
 	var overlay = document.getElementById("overlay");
 	if(!overlay) {
-		var overlay = "<style>#overlay {background-color:rgba(255, 142, 142, 0.23); padding-top: 0; padding-bottom: 0; position: fixed; top: 0; bottom: 0; left: 0; right: 0; height: 100%; } .overlay-row {height: 100%; } .c-overlay {background-color: rgba(75, 187, 22, 0.3); height: 100%; }</style><div id='overlay' class='grid'> <div class='overlay-row row'> <div class='c1 c-overlay'></div> <div class='c2 c-overlay'></div> <div class='c3 c-overlay'></div> <div class='c4 c-overlay'></div> <div class='c5 c-overlay'></div> <div class='c6 c-overlay'></div> <div class='c7 c-overlay'></div> <div class='c8 c-overlay'></div> <div class='c9 c-overlay'></div> <div class='c10 c-overlay'></div> <div class='c11 c-overlay'></div> <div class='c12 c-overlay'></div> </div> </div>";
+		var overlay = "<style>#overlay {background-color:rgba(255, 142, 142, 0.23); padding-top: 0; padding-bottom: 0; position: fixed; top: 0; bottom: 0; left: 0; right: 0; height: 100%; z-index: 9999; } .overlay-row {height: 100%; } .c-overlay {background-color: rgba(75, 187, 22, 0.3); height: 100%; }</style><div id='overlay' class='grid'> <div class='overlay-row row'> <div class='c1 c-overlay'></div> <div class='c2 c-overlay'></div> <div class='c3 c-overlay'></div> <div class='c4 c-overlay'></div> <div class='c5 c-overlay'></div> <div class='c6 c-overlay'></div> <div class='c7 c-overlay'></div> <div class='c8 c-overlay'></div> <div class='c9 c-overlay'></div> <div class='c10 c-overlay'></div> <div class='c11 c-overlay'></div> <div class='c12 c-overlay'></div> </div> </div>";
 		document.body.innerHTML += overlay;
 	}
 	else {
