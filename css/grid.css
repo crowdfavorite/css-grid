@@ -19,8 +19,8 @@
 	Works fine with older browsers that don't support media queries. */
 .grid {
   /* this makes the page wide but keeps content away from the edge */
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
   width: 1024px; }
 
 .c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10, .c11, .c12,
@@ -42,84 +42,98 @@
 
 /* 	1/12 */
 .c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10, .c11, .c12 {
-  width: 65px; }
+  width: 67px; }
 
 .offset1 {
-  margin-left: 105px; }
+  margin-left: 107px; }
+
+[class*=c1-] .offset1:first-child,
+[class*=c2-] .offset1:first-child,
+[class*=c3-] .offset1:first-child,
+[class*=c4-] .offset1:first-child,
+[class*=c5-] .offset1:first-child,
+[class*=c6-] .offset1:first-child,
+[class*=c7-] .offset1:first-child,
+[class*=c8-] .offset1:first-child,
+[class*=c9-] .offset1:first-child,
+[class*=c10-] .offset1:first-child,
+[class*=c11-] .offset1:first-child,
+[class*=c12-] .offset1:first-child {
+  margin-left: 87px; }
 
 /* 	2/12 */
 .c1-2, .c2-3, .c3-4, .c4-5, .c5-6, .c6-7, .c7-8, .c8-9, .c9-10, .c10-11, .c11-12 {
-  width: 150px; }
+  width: 154px; }
 
 .offset2 {
-  margin-left: 170px; }
+  margin-left: 194px; }
 
 /* 	3/12 */
 .c1-3, .c2-4, .c3-5, .c4-6, .c5-7, .c6-8, .c7-9, .c8-10, .c9-11, .c10-12 {
-  width: 235px; }
+  width: 241px; }
 
 .offset3 {
-  margin-left: 235px; }
+  margin-left: 281px; }
 
 /* 	4/12 */
 .c1-4, .c2-5, .c3-6, .c4-7, .c5-8, .c6-9, .c7-10, .c8-11, .c9-12 {
-  width: 320px; }
+  width: 328px; }
 
 .offset4 {
-  margin-left: 300px; }
+  margin-left: 368px; }
 
 /* 	5/12 */
 .c1-5, .c2-6, .c3-7, .c4-8, .c5-9, .c6-10, .c7-11, .c8-12 {
-  width: 405px; }
+  width: 415px; }
 
 .offset5 {
-  margin-left: 365px; }
+  margin-left: 455px; }
 
 /* 	6/12 */
 .c1-6, .c2-7, .c3-8, .c4-9, .c5-10, .c6-11, .c7-12 {
-  width: 490px; }
+  width: 502px; }
 
 .offset6 {
-  margin-left: 430px; }
+  margin-left: 542px; }
 
 /* 	7/12 */
 .c1-7, .c2-8, .c3-9, .c4-10, .c5-11, .c6-12 {
-  width: 575px; }
+  width: 589px; }
 
 .offset7 {
-  margin-left: 495px; }
+  margin-left: 629px; }
 
 /* 	8/12 */
 .c1-8, .c2-9, .c3-10, .c4-11, .c5-12 {
-  width: 660px; }
+  width: 676px; }
 
 .offset8 {
-  margin-left: 560px; }
+  margin-left: 716px; }
 
 /* 	9/12 */
 .c1-9, .c2-10, .c3-11, .c4-12 {
-  width: 745px; }
+  width: 763px; }
 
 .offset9 {
-  margin-left: 625px; }
+  margin-left: 803px; }
 
 /* 	10/12 */
 .c1-10, .c2-11, .c3-12 {
-  width: 830px; }
+  width: 850px; }
 
 .offset10 {
-  margin-left: 690px; }
+  margin-left: 890px; }
 
 /* 	11/12 */
 .c1-11, .c2-12 {
-  width: 915px; }
+  width: 937px; }
 
 .offset11 {
-  margin-left: 755px; }
+  margin-left: 977px; }
 
 /* 	12/12 */
 .c1-12 {
-  width: 65px; }
+  width: 1024px; }
 
 /* 	Accounts for extra margin on first column
 		This value should change a negative margin of whatever your gutter width is. */
@@ -128,7 +142,7 @@
 
 /* 	Medium Sized Grid
 	Tablet sized columns. */
-@media only screen and (min-width: 740px) and (max-width: 1043px) {
+@media only screen and (min-width: 740px) and (max-width: 1023px) {
   .grid {
     padding-left: 10px;
     padding-right: 10px;
@@ -158,84 +172,98 @@
 
   /* 	1/12 */
   .c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10, .c11, .c12 {
-    width: 40px; }
+    width: 41.66667px; }
 
   .offset1 {
-    margin-left: 80px; }
+    margin-left: 81.66667px; }
+
+  [class*=c1-] .offset1:first-child,
+  [class*=c2-] .offset1:first-child,
+  [class*=c3-] .offset1:first-child,
+  [class*=c4-] .offset1:first-child,
+  [class*=c5-] .offset1:first-child,
+  [class*=c6-] .offset1:first-child,
+  [class*=c7-] .offset1:first-child,
+  [class*=c8-] .offset1:first-child,
+  [class*=c9-] .offset1:first-child,
+  [class*=c10-] .offset1:first-child,
+  [class*=c11-] .offset1:first-child,
+  [class*=c12-] .offset1:first-child {
+    margin-left: 61.66667px; }
 
   /* 	2/12 */
   .c1-2, .c2-3, .c3-4, .c4-5, .c5-6, .c6-7, .c7-8, .c8-9, .c9-10, .c10-11, .c11-12 {
-    width: 100px; }
+    width: 103.33333px; }
 
   .offset2 {
-    margin-left: 120px; }
+    margin-left: 143.33333px; }
 
   /* 	3/12 */
   .c1-3, .c2-4, .c3-5, .c4-6, .c5-7, .c6-8, .c7-9, .c8-10, .c9-11, .c10-12 {
-    width: 160px; }
+    width: 165px; }
 
   .offset3 {
-    margin-left: 160px; }
+    margin-left: 205px; }
 
   /* 	4/12 */
   .c1-4, .c2-5, .c3-6, .c4-7, .c5-8, .c6-9, .c7-10, .c8-11, .c9-12 {
-    width: 220px; }
+    width: 226.66667px; }
 
   .offset4 {
-    margin-left: 200px; }
+    margin-left: 266.66667px; }
 
   /* 	5/12 */
   .c1-5, .c2-6, .c3-7, .c4-8, .c5-9, .c6-10, .c7-11, .c8-12 {
-    width: 280px; }
+    width: 288.33333px; }
 
   .offset5 {
-    margin-left: 240px; }
+    margin-left: 328.33333px; }
 
   /* 	6/12 */
   .c1-6, .c2-7, .c3-8, .c4-9, .c5-10, .c6-11, .c7-12 {
-    width: 340px; }
+    width: 350px; }
 
   .offset6 {
-    margin-left: 280px; }
+    margin-left: 390px; }
 
   /* 	7/12 */
   .c1-7, .c2-8, .c3-9, .c4-10, .c5-11, .c6-12 {
-    width: 400px; }
+    width: 411.66667px; }
 
   .offset7 {
-    margin-left: 320px; }
+    margin-left: 451.66667px; }
 
   /* 	8/12 */
   .c1-8, .c2-9, .c3-10, .c4-11, .c5-12 {
-    width: 460px; }
+    width: 473.33333px; }
 
   .offset8 {
-    margin-left: 360px; }
+    margin-left: 513.33333px; }
 
   /* 	9/12 */
   .c1-9, .c2-10, .c3-11, .c4-12 {
-    width: 520px; }
+    width: 535px; }
 
   .offset9 {
-    margin-left: 400px; }
+    margin-left: 575px; }
 
   /* 	10/12 */
   .c1-10, .c2-11, .c3-12 {
-    width: 580px; }
+    width: 596.66667px; }
 
   .offset10 {
-    margin-left: 440px; }
+    margin-left: 636.66667px; }
 
   /* 	11/12 */
   .c1-11, .c2-12 {
-    width: 640px; }
+    width: 658.33333px; }
 
   .offset11 {
-    margin-left: 480px; }
+    margin-left: 698.33333px; }
 
   /* 	12/12 */
   .c1-12 {
-    width: 700px; }
+    width: 720px; }
 
   /* 	Accounts for extra margin on first column
   	This value should change a negative margin of whatever your gutter width is. */
@@ -273,75 +301,89 @@
   .offset1 {
     margin-left: 140px; }
 
+  [class*=c1-] .offset1:first-child,
+  [class*=c2-] .offset1:first-child,
+  [class*=c3-] .offset1:first-child,
+  [class*=c4-] .offset1:first-child,
+  [class*=c5-] .offset1:first-child,
+  [class*=c6-] .offset1:first-child,
+  [class*=c7-] .offset1:first-child,
+  [class*=c8-] .offset1:first-child,
+  [class*=c9-] .offset1:first-child,
+  [class*=c10-] .offset1:first-child,
+  [class*=c11-] .offset1:first-child,
+  [class*=c12-] .offset1:first-child {
+    margin-left: 120px; }
+
   /* 	2/12 */
   .c1-2, .c2-3, .c3-4, .c4-5, .c5-6, .c6-7, .c7-8, .c8-9, .c9-10, .c10-11, .c11-12 {
     width: 220px; }
 
   .offset2 {
-    margin-left: 240px; }
+    margin-left: 260px; }
 
   /* 	3/12 */
   .c1-3, .c2-4, .c3-5, .c4-6, .c5-7, .c6-8, .c7-9, .c8-10, .c9-11, .c10-12 {
     width: 340px; }
 
   .offset3 {
-    margin-left: 340px; }
+    margin-left: 380px; }
 
   /* 	4/12 */
   .c1-4, .c2-5, .c3-6, .c4-7, .c5-8, .c6-9, .c7-10, .c8-11, .c9-12 {
     width: 460px; }
 
   .offset4 {
-    margin-left: 440px; }
+    margin-left: 500px; }
 
   /* 	5/12 */
   .c1-5, .c2-6, .c3-7, .c4-8, .c5-9, .c6-10, .c7-11, .c8-12 {
     width: 580px; }
 
   .offset5 {
-    margin-left: 540px; }
+    margin-left: 620px; }
 
   /* 	6/12 */
   .c1-6, .c2-7, .c3-8, .c4-9, .c5-10, .c6-11, .c7-12 {
     width: 700px; }
 
   .offset6 {
-    margin-left: 640px; }
+    margin-left: 740px; }
 
   /* 	7/12 */
   .c1-7, .c2-8, .c3-9, .c4-10, .c5-11, .c6-12 {
     width: 820px; }
 
   .offset7 {
-    margin-left: 740px; }
+    margin-left: 860px; }
 
   /* 	8/12 */
   .c1-8, .c2-9, .c3-10, .c4-11, .c5-12 {
     width: 940px; }
 
   .offset8 {
-    margin-left: 840px; }
+    margin-left: 980px; }
 
   /* 	9/12 */
   .c1-9, .c2-10, .c3-11, .c4-12 {
     width: 1060px; }
 
   .offset9 {
-    margin-left: 940px; }
+    margin-left: 1100px; }
 
   /* 	10/12 */
   .c1-10, .c2-11, .c3-12 {
     width: 1180px; }
 
   .offset10 {
-    margin-left: 1040px; }
+    margin-left: 1220px; }
 
   /* 	11/12 */
   .c1-11, .c2-12 {
     width: 1300px; }
 
   .offset11 {
-    margin-left: 1140px; }
+    margin-left: 1340px; }
 
   /* 	12/12 */
   .c1-12 {
@@ -386,7 +428,19 @@
 [class*=c9] [class*=c9],
 [class*=c10] [class*=c10],
 [class*=c11] [class*=c11],
-.c12 .c12,
+[class*=c12] [class*=c12],
+[class*=c1-] .offset1:first-child,
+[class*=c2-] .offset1:first-child,
+[class*=c3-] .offset1:first-child,
+[class*=c4-] .offset1:first-child,
+[class*=c5-] .offset1:first-child,
+[class*=c6-] .offset1:first-child,
+[class*=c7-] .offset1:first-child,
+[class*=c8-] .offset1:first-child,
+[class*=c9-] .offset1:first-child,
+[class*=c10-] .offset1:first-child,
+[class*=c11-] .offset1:first-child,
+[class*=c12-] .offset1:first-child,
 .row .row {
   margin-left: 0; }
 
