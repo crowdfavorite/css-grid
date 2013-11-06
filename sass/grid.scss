@@ -2,7 +2,7 @@
  *  https://github.com/crowdfavorite/css-grid
  *	License: http://opensource.org/licenses/mit-license.php  */
 
-// variables (editable)
+// Variables (editable)
 
 // Large (large desktop) in px
 $lg-grid-inner-width: 1420px;
@@ -19,6 +19,9 @@ $sm-grid-inner-width: 720px;
 $sm-grid-gutter: 10px;
 $sm-col-margins: 20px;
 
+// Smallest (block) in px
+$xs-grid-gutter: 20px;
+
 // grid total widths
 $lg-grid-total-width: $lg-grid-inner-width + (2 * $lg-grid-gutter);
 $md-grid-total-width: $md-grid-inner-width + (2 * $md-grid-gutter);
@@ -29,6 +32,8 @@ $desktop-mq: '(min-width: #{$lg-grid-total-width + 30 })';
 $tablet-mq: '(min-width: #{$sm-grid-total-width}) and (max-width: #{$md-grid-total-width - 1})';
 $phone-mq: '(max-width: #{$sm-grid-total-width - 1})';
 
+
+// Variables (don't edit)
 $column-count: 12;
 
 // column widths
@@ -328,6 +333,10 @@ $sm-column-width: (($sm-grid-inner-width - (($sm-col-margins * ($column-count - 
 /* 	Single-column mobile
 	Get rid of widths and floats, go to fluid single column. */
 @media only screen and #{$phone-mq} {
+	.grid {
+		@include gutters($xs-grid-gutter);
+	}
+
 	.grid,
 	.c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8,.c9,.c10,.c11,.c12,
 	.c1-2,.c2-3,.c3-4,.c4-5,.c5-6,.c6-7,.c7-8,.c8-9,.c9-10,.c10-11,.c11-12,
