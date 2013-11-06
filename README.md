@@ -2,6 +2,9 @@
 
 CSSGrid is an effort to use less classes to achieve a comprehensive and flexible grid. Each element in the grid only requires one class. That means no .first or .last classes anywhere.
 
+### Now using SASS
+The `grid.css` is compiled from a SASS file, whose variables can be edited on a per-breakpoint basis. Now you can have custom grid widths, grid gutters, and column margins on each media query breakpoint. SASS will do all the heavy lifting for you, just edit `grid.scss`, compile to `grid.css` and go!
+
 ### Getting Started with Rows 
 
 Using CSSGrid is easy. It starts with a wrapper which is called .grid in this example (but you could change it to whatever you’d like). Once you’ve got the wrapper in place, create divs with a class of .row. Inside each row, create a set of columns for content areas.
@@ -52,7 +55,7 @@ This new version of CSSGrid ships with a bookmarklet overlay to display your gri
 
 ### Weight
 
-CSSGrid means less junk in your HTML in favor of a little bit of extra CSS. Even then, CSSGrid weighs in at 5kb with comments and readable styles.
+CSSGrid means less junk in your HTML in favor of a little bit of extra CSS. Even then, CSSGrid weighs in at 11kb with comments and readable styles.
 
 ### License
 
