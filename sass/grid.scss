@@ -107,19 +107,21 @@ $sm-column-width: (($sm-grid-inner-width - (($sm-col-margins * ($column-count - 
 /* 	1/12 */
 	.c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8,.c9,.c10,.c11,.c12 { @include width($md-column-width, $md-col-margins); }
 	.offset1 { @include offset($md-column-width, $md-col-margins); }
-	[class*=c1-] .offset1:first-child,
-	[class*=c2-] .offset1:first-child,
-	[class*=c3-] .offset1:first-child,
-	[class*=c4-] .offset1:first-child,
-	[class*=c5-] .offset1:first-child,
-	[class*=c6-] .offset1:first-child,
-	[class*=c7-] .offset1:first-child,
-	[class*=c8-] .offset1:first-child,
-	[class*=c9-] .offset1:first-child,
-	[class*=c10-] .offset1:first-child,
-	[class*=c11-] .offset1:first-child,
-	[class*=c12-] .offset1:first-child {
-		@include offset($md-column-width, $md-col-margins, 1, true);
+	[class*=c1-],
+	[class*=c2-],
+	[class*=c3-],
+	[class*=c4-],
+	[class*=c5-],
+	[class*=c6-],
+	[class*=c7-],
+	[class*=c8-],
+	[class*=c9-],
+	[class*=c10-],
+	[class*=c11-],
+	[class*=c12-] {
+		.offset1:first-child {
+			@include offset($md-column-width, $md-col-margins, 1, true);
+		}
 	}
 /* 	2/12 */
 	.c1-2,.c2-3,.c3-4,.c4-5,.c5-6,.c6-7,.c7-8,.c8-9,.c9-10,.c10-11,.c11-12 { @include width($md-column-width, $md-col-margins, 2); }
@@ -191,19 +193,21 @@ $sm-column-width: (($sm-grid-inner-width - (($sm-col-margins * ($column-count - 
 /* 	1/12 */
 	.c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8,.c9,.c10,.c11,.c12 { @include width($sm-column-width, $sm-col-margins); }
 	.offset1 { @include offset($sm-column-width, $sm-col-margins); }
-	[class*=c1-] .offset1:first-child,
-	[class*=c2-] .offset1:first-child,
-	[class*=c3-] .offset1:first-child,
-	[class*=c4-] .offset1:first-child,
-	[class*=c5-] .offset1:first-child,
-	[class*=c6-] .offset1:first-child,
-	[class*=c7-] .offset1:first-child,
-	[class*=c8-] .offset1:first-child,
-	[class*=c9-] .offset1:first-child,
-	[class*=c10-] .offset1:first-child,
-	[class*=c11-] .offset1:first-child,
-	[class*=c12-] .offset1:first-child {
-		@include offset($sm-column-width, $sm-col-margins, 1, true);
+	[class*=c1-],
+	[class*=c2-],
+	[class*=c3-],
+	[class*=c4-],
+	[class*=c5-],
+	[class*=c6-],
+	[class*=c7-],
+	[class*=c8-],
+	[class*=c9-],
+	[class*=c10-],
+	[class*=c11-],
+	[class*=c12-] {
+		.offset1:first-child {
+			@include offset($sm-column-width, $sm-col-margins, 1, true);
+		}
 	}
 /* 	2/12 */
 	.c1-2,.c2-3,.c3-4,.c4-5,.c5-6,.c6-7,.c7-8,.c8-9,.c9-10,.c10-11,.c11-12 { @include width($sm-column-width, $sm-col-margins, 2); }
@@ -275,19 +279,21 @@ $sm-column-width: (($sm-grid-inner-width - (($sm-col-margins * ($column-count - 
 /* 	1/12 */
 	.c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8,.c9,.c10,.c11,.c12 { @include width($lg-column-width, $lg-col-margins); }
 	.offset1 { @include offset($lg-column-width, $lg-col-margins); }
-	[class*=c1-] .offset1:first-child,
-	[class*=c2-] .offset1:first-child,
-	[class*=c3-] .offset1:first-child,
-	[class*=c4-] .offset1:first-child,
-	[class*=c5-] .offset1:first-child,
-	[class*=c6-] .offset1:first-child,
-	[class*=c7-] .offset1:first-child,
-	[class*=c8-] .offset1:first-child,
-	[class*=c9-] .offset1:first-child,
-	[class*=c10-] .offset1:first-child,
-	[class*=c11-] .offset1:first-child,
-	[class*=c12-] .offset1:first-child {
-		@include offset($lg-column-width, $lg-col-margins, 1, true);
+	[class*=c1-],
+	[class*=c2-],
+	[class*=c3-],
+	[class*=c4-],
+	[class*=c5-],
+	[class*=c6-],
+	[class*=c7-],
+	[class*=c8-],
+	[class*=c9-],
+	[class*=c10-],
+	[class*=c11-],
+	[class*=c12-] {
+		.offset1:first-child {
+			@include offset($lg-column-width, $lg-col-margins, 1, true);
+		}
 	}
 /* 	2/12 */
 	.c1-2,.c2-3,.c3-4,.c4-5,.c5-6,.c6-7,.c7-8,.c8-9,.c9-10,.c10-11,.c11-12 { @include width($lg-column-width, $lg-col-margins, 2); }
