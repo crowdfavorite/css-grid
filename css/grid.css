@@ -1,152 +1,352 @@
 /*	CSSGrid
  *  https://github.com/crowdfavorite/css-grid
  *	License: http://opensource.org/licenses/mit-license.php  */
-
+/** mixins
+ -------------------------------------------------- */
 /** grid foundation
  -------------------------------------------------- */
 .grid {
-	margin: 0 auto;
-	/* this makes the page wide but keeps content away from the edge */
-	padding: 30px;
-}
+  margin: 0 auto; }
 
 /* fluid media */
 .row img,
 .row object,
 .row embed,
 .row video {
-	max-width: 100%;
-}
+  max-width: 100%; }
 
-/* Default large grid.
-Works fine with older browsers that don't support media queries. */
+/* 	Default Desktop/Tablet Grid
+	Works fine with older browsers that don't support media queries. */
 .grid {
-	width: 966px;
-}
-/* Apply to classes that contain c6- or c4- */
-[class*="c6-"], 
-[class*="c4-"] {
-	display: inline; /* IE6/IE7 double-margin float bug fix */
-	float: left;
-	margin-left: 30px;
-	/* Prevent collapsing of empty columns. Min-height prevents collapse
-	everywhere but IE6. IE6 doesn't collapse empty collumns anyhow, so no need
-	for a fix there. */
-	min-height: 1px;
-}
+  /* this makes the page wide but keeps content away from the edge */
+  padding-left: 0px;
+  padding-right: 0px;
+  width: 1048px; }
 
-/* Sixths */
-.c6-1,.c6-2,.c6-3,.c6-4,.c6-5,.c6-6 { width: 136px; }
-/* Quarters */
-.c4-1,.c4-2,.c4-3,.c4-4 { width: 219px; }
-/* Thirds */
-.c6-12,.c6-23,.c6-34,.c6-45,.c6-56 { width: 302px; }
-/* Halves */
-.c4-12,.c4-23,.c4-34,
-.c6-123,.c6-234,.c6-345,.c6-456 { width: 468px; }
-/* Two-thirds */
-.c6-1234,.c6-2345,.c6-3456 { width: 634px; }
-/* three-quarters */
-.c4-123,.c4-234 { width: 717px; }
-/* Five-sixths */
-.c6-12345,.c6-23456 { width: 800px; }
+.c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10, .c11, .c12,
+.c1-2, .c2-3, .c3-4, .c4-5, .c5-6, .c6-7, .c7-8, .c8-9, .c9-10, .c10-11, .c11-12,
+.c1-3, .c2-4, .c3-5, .c4-6, .c5-7, .c6-8, .c7-9, .c8-10, .c9-11, .c10-12,
+.c1-4, .c2-5, .c3-6, .c4-7, .c5-8, .c6-9, .c7-10, .c8-11, .c9-12,
+.c1-5, .c2-6, .c3-7, .c4-8, .c5-9, .c6-10, .c7-11, .c8-12,
+.c1-6, .c2-7, .c3-8, .c4-9, .c5-10, .c6-11, .c7-12,
+.c1-7, .c2-8, .c3-9, .c4-10, .c5-11, .c6-12,
+.c1-8, .c2-9, .c3-10, .c4-11, .c5-12,
+.c1-9, .c2-10, .c3-11, .c4-12,
+.c1-10, .c2-11, .c3-12,
+.c1-11, .c2-12,
+.c1-12 {
+  margin-left: 20px;
+  display: inline;
+  float: left;
+  min-height: 1px; }
 
-/* Full-width
-These classes are not included in column float definitions, since they don't
-have either margin or fixed width. Including display:block and width styles
-so these classes can be used on non-block-level elements. */
-.c6-123456,
-.c4-1234 {
-	float: none;
-	clear: both;
-	display: block;
-	width: auto;
-}
+/* 	1/12 */
+.c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10, .c11, .c12 {
+  width: 69px; }
 
-/* Medium-sized grid. */
-@media only screen and (min-width: 760px) and (max-width: 1025px) {
-	.grid {
-		width: 700px;
-	}
-	/* Apply to classes that contain c6- or c4- */
-	[class*="c6-"], 
-	[class*="c4-"] {
-		margin-left: 20px;
-	}
-	/* sixths */
-	.c6-1,.c6-2,.c6-3,.c6-4,.c6-5,.c6-6 { width: 100px; }
-	/* quarters */
-	.c4-1,.c4-2,.c4-3,.c4-4 { width: 160px; }
-	/* thirds */
-	.c6-12,.c6-23,.c6-34,.c6-45,.c6-56 { width: 220px; }
-	/* halves */
-	.c4-12,.c4-23,.c4-34,
-	.c6-123,.c6-234,.c6-345,.c6-456 { width: 340px; }
-	/* two-thirds */
-	.c6-1234,.c6-2345,.c6-3456 { width: 460px; }
-	/* three-quarters */
-	.c4-123,.c4-234 { width: 520px; }
-	/* five-sixths */
-	.c6-12345,.c6-23456 { width: 580px; } 
-}
+.offset1 {
+  margin-left: 109px; }
 
-/* Single-column mobile
-Get rid of widths and floats, go to fluid single column. */
-@media only screen and (max-width: 759px) {
-	.grid,
-	/* Apply to classes that contain c6- or c4- */
-	[class*="c6-"], 
-	[class*="c4-"] {
-		display: block;
-		float: none;
-		margin-left: 0;
-		width: auto;
-	}
-}
+[class*=c1-] .offset1:first-child,
+[class*=c2-] .offset1:first-child,
+[class*=c3-] .offset1:first-child,
+[class*=c4-] .offset1:first-child,
+[class*=c5-] .offset1:first-child,
+[class*=c6-] .offset1:first-child,
+[class*=c7-] .offset1:first-child,
+[class*=c8-] .offset1:first-child,
+[class*=c9-] .offset1:first-child,
+[class*=c10-] .offset1:first-child,
+[class*=c11-] .offset1:first-child,
+[class*=c12-] .offset1:first-child {
+  margin-left: 89px; }
 
-/* zeroing out leftmost .unit margins */
-[class*="c6-1"], 
-[class*="c4-1"] {
-	margin-left: 0;
-}
-/* zeroing out leftmost nested .unit margins */
-[class*="c6-2"] [class*="c6-2"],
-[class*="c6-3"] [class*="c6-3"],
-[class*="c6-4"] [class*="c6-4"],
-[class*="c6-5"] [class*="c6-5"],
-[class*="c6-6"] [class*="c6-6"],
-[class*="c4-2"] [class*="c4-2"],
-[class*="c4-3"] [class*="c4-3"],
-[class*="c4-4"] [class*="c4-4"] {
-	margin-left: 0;
-}
+/* 	2/12 */
+.c1-2, .c2-3, .c3-4, .c4-5, .c5-6, .c6-7, .c7-8, .c8-9, .c9-10, .c10-11, .c11-12 {
+  width: 158px; }
+
+.offset2 {
+  margin-left: 198px; }
+
+/* 	3/12 */
+.c1-3, .c2-4, .c3-5, .c4-6, .c5-7, .c6-8, .c7-9, .c8-10, .c9-11, .c10-12 {
+  width: 247px; }
+
+.offset3 {
+  margin-left: 287px; }
+
+/* 	4/12 */
+.c1-4, .c2-5, .c3-6, .c4-7, .c5-8, .c6-9, .c7-10, .c8-11, .c9-12 {
+  width: 336px; }
+
+.offset4 {
+  margin-left: 376px; }
+
+/* 	5/12 */
+.c1-5, .c2-6, .c3-7, .c4-8, .c5-9, .c6-10, .c7-11, .c8-12 {
+  width: 425px; }
+
+.offset5 {
+  margin-left: 465px; }
+
+/* 	6/12 */
+.c1-6, .c2-7, .c3-8, .c4-9, .c5-10, .c6-11, .c7-12 {
+  width: 514px; }
+
+.offset6 {
+  margin-left: 554px; }
+
+/* 	7/12 */
+.c1-7, .c2-8, .c3-9, .c4-10, .c5-11, .c6-12 {
+  width: 603px; }
+
+.offset7 {
+  margin-left: 643px; }
+
+/* 	8/12 */
+.c1-8, .c2-9, .c3-10, .c4-11, .c5-12 {
+  width: 692px; }
+
+.offset8 {
+  margin-left: 732px; }
+
+/* 	9/12 */
+.c1-9, .c2-10, .c3-11, .c4-12 {
+  width: 781px; }
+
+.offset9 {
+  margin-left: 821px; }
+
+/* 	10/12 */
+.c1-10, .c2-11, .c3-12 {
+  width: 870px; }
+
+.offset10 {
+  margin-left: 910px; }
+
+/* 	11/12 */
+.c1-11, .c2-12 {
+  width: 959px; }
+
+.offset11 {
+  margin-left: 999px; }
+
+/* 	12/12 */
+.c1-12 {
+  width: 1048px; }
+
+/* 	Accounts for extra margin on first column
+		This value should change a negative margin of whatever your gutter width is. */
+.row {
+  margin-left: -20px; }
+
+/* 	Medium Sized Grid
+	Tablet sized columns. */
+@media only screen and (min-width: 800px) and (max-width: 1047px) {
+  .grid {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 760px; }
+
+  .c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10, .c11, .c12,
+  .c1-2, .c2-3, .c3-4, .c4-5, .c5-6, .c6-7, .c7-8, .c8-9, .c9-10, .c10-11, .c11-12,
+  .c1-3, .c2-4, .c3-5, .c4-6, .c5-7, .c6-8, .c7-9, .c8-10, .c9-11, .c10-12,
+  .c1-4, .c2-5, .c3-6, .c4-7, .c5-8, .c6-9, .c7-10, .c8-11, .c9-12,
+  .c1-5, .c2-6, .c3-7, .c4-8, .c5-9, .c6-10, .c7-11, .c8-12,
+  .c1-6, .c2-7, .c3-8, .c4-9, .c5-10, .c6-11, .c7-12,
+  .c1-7, .c2-8, .c3-9, .c4-10, .c5-11, .c6-12,
+  .c1-8, .c2-9, .c3-10, .c4-11, .c5-12,
+  .c1-9, .c2-10, .c3-11, .c4-12,
+  .c1-10, .c2-11, .c3-12,
+  .c1-11, .c2-12,
+  .c1-12 {
+    display: inline;
+    /* IE6/IE7 double-margin float bug fix */
+    float: left;
+    margin-left: 20px;
+    /* Prevent collapsing of empty columns. Min-height prevents collapse
+    everywhere but IE6. IE6 doesn't collapse empty collumns anyhow, so no need
+    for a fix there. */
+    min-height: 1px;
+    clear: none; }
+
+  /* 	1/12 */
+  .c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10, .c11, .c12 {
+    width: 45px; }
+
+  .offset1 {
+    margin-left: 85px; }
+
+  [class*=c1-] .offset1:first-child,
+  [class*=c2-] .offset1:first-child,
+  [class*=c3-] .offset1:first-child,
+  [class*=c4-] .offset1:first-child,
+  [class*=c5-] .offset1:first-child,
+  [class*=c6-] .offset1:first-child,
+  [class*=c7-] .offset1:first-child,
+  [class*=c8-] .offset1:first-child,
+  [class*=c9-] .offset1:first-child,
+  [class*=c10-] .offset1:first-child,
+  [class*=c11-] .offset1:first-child,
+  [class*=c12-] .offset1:first-child {
+    margin-left: 65px; }
+
+  /* 	2/12 */
+  .c1-2, .c2-3, .c3-4, .c4-5, .c5-6, .c6-7, .c7-8, .c8-9, .c9-10, .c10-11, .c11-12 {
+    width: 110px; }
+
+  .offset2 {
+    margin-left: 150px; }
+
+  /* 	3/12 */
+  .c1-3, .c2-4, .c3-5, .c4-6, .c5-7, .c6-8, .c7-9, .c8-10, .c9-11, .c10-12 {
+    width: 175px; }
+
+  .offset3 {
+    margin-left: 215px; }
+
+  /* 	4/12 */
+  .c1-4, .c2-5, .c3-6, .c4-7, .c5-8, .c6-9, .c7-10, .c8-11, .c9-12 {
+    width: 240px; }
+
+  .offset4 {
+    margin-left: 280px; }
+
+  /* 	5/12 */
+  .c1-5, .c2-6, .c3-7, .c4-8, .c5-9, .c6-10, .c7-11, .c8-12 {
+    width: 305px; }
+
+  .offset5 {
+    margin-left: 345px; }
+
+  /* 	6/12 */
+  .c1-6, .c2-7, .c3-8, .c4-9, .c5-10, .c6-11, .c7-12 {
+    width: 370px; }
+
+  .offset6 {
+    margin-left: 410px; }
+
+  /* 	7/12 */
+  .c1-7, .c2-8, .c3-9, .c4-10, .c5-11, .c6-12 {
+    width: 435px; }
+
+  .offset7 {
+    margin-left: 475px; }
+
+  /* 	8/12 */
+  .c1-8, .c2-9, .c3-10, .c4-11, .c5-12 {
+    width: 500px; }
+
+  .offset8 {
+    margin-left: 540px; }
+
+  /* 	9/12 */
+  .c1-9, .c2-10, .c3-11, .c4-12 {
+    width: 565px; }
+
+  .offset9 {
+    margin-left: 605px; }
+
+  /* 	10/12 */
+  .c1-10, .c2-11, .c3-12 {
+    width: 630px; }
+
+  .offset10 {
+    margin-left: 670px; }
+
+  /* 	11/12 */
+  .c1-11, .c2-12 {
+    width: 695px; }
+
+  .offset11 {
+    margin-left: 735px; }
+
+  /* 	12/12 */
+  .c1-12 {
+    width: 760px; }
+
+  /* 	Accounts for extra margin on first column
+  	This value should change a negative margin of whatever your gutter width is. */
+  .row {
+    margin-left: -20px; } }
+/* 	Large Desktop Grid
+	Very wide columns for large monitors. */
+/* 	Single-column mobile
+	Get rid of widths and floats, go to fluid single column. */
+@media only screen and (max-width: 799px) {
+  .grid {
+    padding-left: 10px;
+    padding-right: 10px; }
+
+  .grid,
+  .c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10, .c11, .c12,
+  .c1-2, .c2-3, .c3-4, .c4-5, .c5-6, .c6-7, .c7-8, .c8-9, .c9-10, .c10-11, .c11-12,
+  .c1-3, .c2-4, .c3-5, .c4-6, .c5-7, .c6-8, .c7-9, .c8-10, .c9-11, .c10-12,
+  .c1-4, .c2-5, .c3-6, .c4-7, .c5-8, .c6-9, .c7-10, .c8-11, .c9-12,
+  .c1-5, .c2-6, .c3-7, .c4-8, .c5-9, .c6-10, .c7-11, .c8-12,
+  .c1-6, .c2-7, .c3-8, .c4-9, .c5-10, .c6-11, .c7-12,
+  .c1-7, .c2-8, .c3-9, .c4-10, .c5-11, .c6-12,
+  .c1-8, .c2-9, .c3-10, .c4-11, .c5-12,
+  .c1-9, .c2-10, .c3-11, .c4-12,
+  .c1-10, .c2-11, .c3-12,
+  .c1-11, .c2-12,
+  .c1-12 {
+    display: block;
+    float: none;
+    margin-left: 0;
+    width: auto; }
+
+  .row {
+    margin-left: 0; } }
+/* Zeroing out leftmost nested .unit margins */
+[class*=c1] [class*=c1],
+[class*=c2] [class*=c2],
+[class*=c3] [class*=c3],
+[class*=c4] [class*=c4],
+[class*=c5] [class*=c5],
+[class*=c6] [class*=c6],
+[class*=c7] [class*=c7],
+[class*=c8] [class*=c8],
+[class*=c9] [class*=c9],
+[class*=c10] [class*=c10],
+[class*=c11] [class*=c11],
+[class*=c12] [class*=c12],
+[class*=c1-] .offset1:first-child,
+[class*=c2-] .offset1:first-child,
+[class*=c3-] .offset1:first-child,
+[class*=c4-] .offset1:first-child,
+[class*=c5-] .offset1:first-child,
+[class*=c6-] .offset1:first-child,
+[class*=c7-] .offset1:first-child,
+[class*=c8-] .offset1:first-child,
+[class*=c9-] .offset1:first-child,
+[class*=c10-] .offset1:first-child,
+[class*=c11-] .offset1:first-child,
+[class*=c12-] .offset1:first-child,
+.row .row {
+  margin-left: 0; }
+
+/* Full-width  */
+.c1-12 {
+  clear: both;
+  display: block;
+  min-height: 1px; }
 
 /** grid utilities
  -------------------------------------------------- */
-/* Row Clearfix
-Uses variation of Nicolas Gallagher's Micro Clearfix.
-http://nicolasgallagher.com/micro-clearfix-hack/ */
+/* Row offsetfix
+Uses variation of Nicolas Gallagher's Micro offsetfix.
+http://nicolasgallagher.com/micro-offsetfix-hack/ */
 .row:before,
 .row:after {
-	content:"";
-	display:table;
-}
-.row:after {
-	clear:both;
-}
-.row {
-	/* Just in case: make sure that rows clear outside floats. */
-	clear: both;
-	/* For IE 6/7 (trigger hasLayout) */
-	zoom:1;
-}
+  content: "";
+  display: table; }
 
-/** grid helper classes
- -------------------------------------------------- */
-/* Set overflow:hidden to crop overflow content.
-Good for user-generated content. Use this class if you want to support IE6 -- it has issues with overflow.
-Example usage: .grid.hideoverflow. */
-.hideoverflow [class*="c6-"],
-.hideoverflow [class*="c4-"] {
-	overflow: hidden;
-}
+.row:after {
+  clear: both; }
+
+.row {
+  /* Just in case: make sure that rows offset outside floats. */
+  clear: both;
+  /* For IE 6/7 (trigger hasLayout) */
+  zoom: 1; }

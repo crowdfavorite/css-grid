@@ -61,16 +61,50 @@ input:invalid, textarea:invalid { background-color: #f0dddd; }
 table { border-collapse: collapse; border-spacing: 0; }
 td { vertical-align: top; }
 
+/* ==|== example.html classes ======================================== */
 
-/* ==|== primary styles =====================================================
-   Author: 
-   ========================================================================== */
-/** Example Grid Preview Styles
--------------------------------------------------- */
-.example-grids p {
-	border: 1px solid #999;
-	padding: 1em;
+body {
+	border-top: 4px solid #9bbfcf;
+	color: #323232;
+	font-family: sans-serif;
+	font-size: 13px;
+	line-height: 18px;
 }
+.placeholder {
+	background: #e0e0e0;
+	color: #fff;
+	font-family: sans-serif;
+	font-size: 14px;
+	line-height: 36px;
+	margin-bottom: 18px;
+	min-height: 36px;
+	text-align: center;
+}
+.placeholder:hover {
+	cursor: crosshair;
+	opacity: 0.9;
+}
+.nested {
+	background: #9bbfcf;
+	color: #fff;
+	font-family: sans-serif;
+	text-align: center;
+}
+.nested-2x {
+	background: #c7e2ee;
+	color: #fff;
+	font-family: sans-serif;
+	text-align: center;
+}
+
+
+::selection 	 	{background: #e9f3f8;color: #323232;}
+::-moz-selection 	{background: #e9f3f8;color: #323232;}
+img::selection 		{background: transparent;}
+img::-moz-selection	{background: transparent;}
+body 				{-webkit-tap-highlight-color: #f5f5f5;}
+
+
 
 
 /* ==|== non-semantic helper classes ======================================== */
