@@ -3,7 +3,7 @@
 CSSGrid is an effort to use less classes to achieve a comprehensive and flexible grid. Each element in the grid only requires one class. That means no .first or .last classes anywhere.
 
 ### Now using SASS
-The `grid.css` is compiled from a SASS file, whose variables can be edited on a per-breakpoint basis. Now you can have custom grid widths, grid gutters, and column margins on each media query breakpoint. SASS will do all the heavy lifting for you, just edit `grid.scss`, compile to `grid.css` and go!
+The `grid.css` is compiled from a SASS file, whose variables can be edited on a per-breakpoint basis. Now you can have custom grid widths, grid gutters, and column margins on each media query breakpoint. SASS will do all the heavy lifting for you, just edit `grid.scss`, compile to `grid.css` and go! There's even an option to include an even larger breakpoint in CSSGrid, if your design requires it. Simply change the `$use-lg-breakpoint` to `true` and edit the appropriate variables.
 
 ### Getting Started with Rows 
 
