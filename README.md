@@ -10,13 +10,13 @@ Make sure the variables that you choose will work with the 12-column grid. For e
 
 ### Getting Started with Rows 
 
-Using CSSGrid is easy. It starts with a wrapper which is called .grid in this example (but you could change it to whatever youâ€™d like). Once youâ€™ve got the wrapper in place, create divs with a class of .row. Inside each row, create a set of columns for content areas.
+Using CSSGrid is easy. It starts with a wrapper which is called .grid in this example (but you could change it to whatever you'd like). Once you've got the wrapper in place, create divs with a class of .row. Inside each row, create a set of columns for content areas.
 
 ### Column Classes
 
-This grid is built on 12 columns and allows you to wrap your content in the desired number of columns. The gridâ€™s class names range from .c1 to .c12 for single columns, but spanning multiple columns is as simple as assigning the column span to your class. For example, .c1-4 would span the first four columns and .c5-8 would span the next three. 
+This grid is built on 12 columns and allows you to wrap your content in the desired number of columns. The grid's class names range from .c1 to .c12 for single columns, but spanning multiple columns is as simple as assigning the column span to your class. For example, .c1-4 would span the first four columns and .c5-8 would span the next three. 
 
-CSSGrid is built on a 12 column grid. You can combine columns easily to support your different structures. Each column class is prefixed with a c designator and from there itâ€™s a simple matter of choosing the appropriate span of columns (1-n and so on) youâ€™d wish to use.
+CSSGrid is built on a 12 column grid. You can combine columns easily to support your different structures. Each column class is prefixed with a c designator and from there it's a simple matter of choosing the appropriate span of columns (1-n and so on) you'd wish to use.
 
 Spanning columns is done by simply running numbers together, for example: c1-3 would be a solid div spanning three columns (or 3/12) while c4-5 would be solid div spanning two columns (2/12) wide and appearing after the first three columns.
 
@@ -42,7 +42,7 @@ This latest version of CSSGrid introduces offsets. Previously to offset a conten
 		  </div>
 	</div>
 
-would yield an eleven column block of content offset by one column on the left. This syntax still works, but if youâ€™d prefer to keep your markup clear of empty divs, this new method with offsets will achieve the same results:
+would yield an eleven column block of content offset by one column on the left. This syntax still works, but if you'd prefer to keep your markup clear of empty divs, this new method with offsets will achieve the same results:
 
 	<div class="row">
 		<div class"c2-12 offset1">
@@ -50,7 +50,7 @@ would yield an eleven column block of content offset by one column on the left. 
 		</div>
 	</div>
 
-Simply append the offset class with the number of columns to the left youâ€™re wanting to offset. n.b. Nested offsets are not supported.
+Simply append the offset class with the number of columns to the left you're wanting to offset. n.b. Nested offsets are not supported.
 
 ### Grid Overlay
 
@@ -62,4 +62,4 @@ CSSGrid means less junk in your HTML in favor of a little bit of extra CSS. Even
 
 ### License
 
-CSSGrid is licensed under the MIT License.
+CSSGrid is licensed under the [MIT License](http://opensource.org/licenses/MIT).
