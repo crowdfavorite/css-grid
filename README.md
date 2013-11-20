@@ -58,7 +58,7 @@ This new version of CSSGrid ships with a bookmarklet overlay to display your gri
 
 ### Weight
 
-CSSGrid means less junk in your HTML in favor of a little bit of extra CSS. Even then, CSSGrid weighs in at 11kb with comments and readable styles.
+CSSGrid means less junk in your HTML in favor of a little bit of extra CSS. Even then, CSSGrid weighs in at 8kb with comments and readable styles.
 
 ### License
 
