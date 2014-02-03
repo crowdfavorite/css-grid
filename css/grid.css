@@ -1,29 +1,36 @@
 /*	CSSGrid
  * 	https://github.com/crowdfavorite/css-grid
- * 	Version: 2.0.2
+ * 	Version: 2.1
  *	License: http://opensource.org/licenses/mit-license.php  */
 /** mixins
  -------------------------------------------------- */
 /** grid foundation
  -------------------------------------------------- */
+/* line 72, ../sass/grid.scss */
 .grid {
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 /* fluid media */
+/* line 80, ../sass/grid.scss */
 .row img,
 .row object,
 .row embed,
 .row video {
-  max-width: 100%; }
+  max-width: 100%;
+}
 
 /* 	Default Desktop/Tablet Grid
 	Works fine with older browsers that don't support media queries. */
+/* line 86, ../sass/grid.scss */
 .grid {
   /* this makes the page wide but keeps content away from the edge */
   padding-left: 0px;
   padding-right: 0px;
-  width: 1048px; }
+  width: 1048px;
+}
 
+/* line 102, ../sass/grid.scss */
 .c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10, .c11, .c12,
 .c1-2, .c2-3, .c3-4, .c4-5, .c5-6, .c6-7, .c7-8, .c8-9, .c9-10, .c10-11, .c11-12,
 .c1-3, .c2-4, .c3-5, .c4-6, .c5-7, .c6-8, .c7-9, .c8-10, .c9-11, .c10-12,
@@ -39,15 +46,21 @@
   margin-left: 20px;
   display: inline;
   float: left;
-  min-height: 1px; }
+  min-height: 1px;
+}
 
 /* 	1/12 */
+/* line 110, ../sass/grid.scss */
 .c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10, .c11, .c12 {
-  width: 69px; }
+  width: 69px;
+}
 
+/* line 111, ../sass/grid.scss */
 .offset1 {
-  margin-left: 109px; }
+  margin-left: 109px;
+}
 
+/* line 124, ../sass/grid.scss */
 [class*=c1-] .offset1:first-child,
 [class*=c2-] .offset1:first-child,
 [class*=c3-] .offset1:first-child,
@@ -60,95 +73,143 @@
 [class*=c10-] .offset1:first-child,
 [class*=c11-] .offset1:first-child,
 [class*=c12-] .offset1:first-child {
-  margin-left: 89px; }
+  margin-left: 89px;
+}
 
 /* 	2/12 */
+/* line 129, ../sass/grid.scss */
 .c1-2, .c2-3, .c3-4, .c4-5, .c5-6, .c6-7, .c7-8, .c8-9, .c9-10, .c10-11, .c11-12 {
-  width: 158px; }
+  width: 158px;
+}
 
+/* line 130, ../sass/grid.scss */
 .offset2 {
-  margin-left: 198px; }
+  margin-left: 198px;
+}
 
 /* 	3/12 */
+/* line 132, ../sass/grid.scss */
 .c1-3, .c2-4, .c3-5, .c4-6, .c5-7, .c6-8, .c7-9, .c8-10, .c9-11, .c10-12 {
-  width: 247px; }
+  width: 247px;
+}
 
+/* line 133, ../sass/grid.scss */
 .offset3 {
-  margin-left: 287px; }
+  margin-left: 287px;
+}
 
 /* 	4/12 */
+/* line 135, ../sass/grid.scss */
 .c1-4, .c2-5, .c3-6, .c4-7, .c5-8, .c6-9, .c7-10, .c8-11, .c9-12 {
-  width: 336px; }
+  width: 336px;
+}
 
+/* line 136, ../sass/grid.scss */
 .offset4 {
-  margin-left: 376px; }
+  margin-left: 376px;
+}
 
 /* 	5/12 */
+/* line 138, ../sass/grid.scss */
 .c1-5, .c2-6, .c3-7, .c4-8, .c5-9, .c6-10, .c7-11, .c8-12 {
-  width: 425px; }
+  width: 425px;
+}
 
+/* line 139, ../sass/grid.scss */
 .offset5 {
-  margin-left: 465px; }
+  margin-left: 465px;
+}
 
 /* 	6/12 */
+/* line 141, ../sass/grid.scss */
 .c1-6, .c2-7, .c3-8, .c4-9, .c5-10, .c6-11, .c7-12 {
-  width: 514px; }
+  width: 514px;
+}
 
+/* line 142, ../sass/grid.scss */
 .offset6 {
-  margin-left: 554px; }
+  margin-left: 554px;
+}
 
 /* 	7/12 */
+/* line 144, ../sass/grid.scss */
 .c1-7, .c2-8, .c3-9, .c4-10, .c5-11, .c6-12 {
-  width: 603px; }
+  width: 603px;
+}
 
+/* line 145, ../sass/grid.scss */
 .offset7 {
-  margin-left: 643px; }
+  margin-left: 643px;
+}
 
 /* 	8/12 */
+/* line 147, ../sass/grid.scss */
 .c1-8, .c2-9, .c3-10, .c4-11, .c5-12 {
-  width: 692px; }
+  width: 692px;
+}
 
+/* line 148, ../sass/grid.scss */
 .offset8 {
-  margin-left: 732px; }
+  margin-left: 732px;
+}
 
 /* 	9/12 */
+/* line 150, ../sass/grid.scss */
 .c1-9, .c2-10, .c3-11, .c4-12 {
-  width: 781px; }
+  width: 781px;
+}
 
+/* line 151, ../sass/grid.scss */
 .offset9 {
-  margin-left: 821px; }
+  margin-left: 821px;
+}
 
 /* 	10/12 */
+/* line 153, ../sass/grid.scss */
 .c1-10, .c2-11, .c3-12 {
-  width: 870px; }
+  width: 870px;
+}
 
+/* line 154, ../sass/grid.scss */
 .offset10 {
-  margin-left: 910px; }
+  margin-left: 910px;
+}
 
 /* 	11/12 */
+/* line 156, ../sass/grid.scss */
 .c1-11, .c2-12 {
-  width: 959px; }
+  width: 959px;
+}
 
+/* line 157, ../sass/grid.scss */
 .offset11 {
-  margin-left: 999px; }
+  margin-left: 999px;
+}
 
 /* 	12/12 */
+/* line 159, ../sass/grid.scss */
 .c1-12 {
-  width: 1048px; }
+  width: 1048px;
+}
 
 /* 	Accounts for extra margin on first column
 		This value should change a negative margin of whatever your gutter width is. */
+/* line 162, ../sass/grid.scss */
 .row {
-  margin-left: -20px; }
+  margin-left: -20px;
+}
 
 /* 	Medium Sized Grid
 	Tablet sized columns. */
 @media only screen and (min-width: 800px) and (max-width: 1047px) {
+  /* line 170, ../sass/grid.scss */
   .grid {
     padding-left: 20px;
     padding-right: 20px;
-    width: 760px; }
+    width: 760px;
+  }
 
+  /* line 185, ../sass/grid.scss */
   .c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10, .c11, .c12,
   .c1-2, .c2-3, .c3-4, .c4-5, .c5-6, .c6-7, .c7-8, .c8-9, .c9-10, .c10-11, .c11-12,
   .c1-3, .c2-4, .c3-5, .c4-6, .c5-7, .c6-8, .c7-9, .c8-10, .c9-11, .c10-12,
@@ -169,15 +230,21 @@
     everywhere but IE6. IE6 doesn't collapse empty collumns anyhow, so no need
     for a fix there. */
     min-height: 1px;
-    clear: none; }
+    clear: none;
+  }
 
   /* 	1/12 */
+  /* line 196, ../sass/grid.scss */
   .c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10, .c11, .c12 {
-    width: 45px; }
+    width: 45px;
+  }
 
+  /* line 197, ../sass/grid.scss */
   .offset1 {
-    margin-left: 85px; }
+    margin-left: 85px;
+  }
 
+  /* line 210, ../sass/grid.scss */
   [class*=c1-] .offset1:first-child,
   [class*=c2-] .offset1:first-child,
   [class*=c3-] .offset1:first-child,
@@ -190,95 +257,144 @@
   [class*=c10-] .offset1:first-child,
   [class*=c11-] .offset1:first-child,
   [class*=c12-] .offset1:first-child {
-    margin-left: 65px; }
+    margin-left: 65px;
+  }
 
   /* 	2/12 */
+  /* line 215, ../sass/grid.scss */
   .c1-2, .c2-3, .c3-4, .c4-5, .c5-6, .c6-7, .c7-8, .c8-9, .c9-10, .c10-11, .c11-12 {
-    width: 110px; }
+    width: 110px;
+  }
 
+  /* line 216, ../sass/grid.scss */
   .offset2 {
-    margin-left: 150px; }
+    margin-left: 150px;
+  }
 
   /* 	3/12 */
+  /* line 218, ../sass/grid.scss */
   .c1-3, .c2-4, .c3-5, .c4-6, .c5-7, .c6-8, .c7-9, .c8-10, .c9-11, .c10-12 {
-    width: 175px; }
+    width: 175px;
+  }
 
+  /* line 219, ../sass/grid.scss */
   .offset3 {
-    margin-left: 215px; }
+    margin-left: 215px;
+  }
 
   /* 	4/12 */
+  /* line 221, ../sass/grid.scss */
   .c1-4, .c2-5, .c3-6, .c4-7, .c5-8, .c6-9, .c7-10, .c8-11, .c9-12 {
-    width: 240px; }
+    width: 240px;
+  }
 
+  /* line 222, ../sass/grid.scss */
   .offset4 {
-    margin-left: 280px; }
+    margin-left: 280px;
+  }
 
   /* 	5/12 */
+  /* line 224, ../sass/grid.scss */
   .c1-5, .c2-6, .c3-7, .c4-8, .c5-9, .c6-10, .c7-11, .c8-12 {
-    width: 305px; }
+    width: 305px;
+  }
 
+  /* line 225, ../sass/grid.scss */
   .offset5 {
-    margin-left: 345px; }
+    margin-left: 345px;
+  }
 
   /* 	6/12 */
+  /* line 227, ../sass/grid.scss */
   .c1-6, .c2-7, .c3-8, .c4-9, .c5-10, .c6-11, .c7-12 {
-    width: 370px; }
+    width: 370px;
+  }
 
+  /* line 228, ../sass/grid.scss */
   .offset6 {
-    margin-left: 410px; }
+    margin-left: 410px;
+  }
 
   /* 	7/12 */
+  /* line 230, ../sass/grid.scss */
   .c1-7, .c2-8, .c3-9, .c4-10, .c5-11, .c6-12 {
-    width: 435px; }
+    width: 435px;
+  }
 
+  /* line 231, ../sass/grid.scss */
   .offset7 {
-    margin-left: 475px; }
+    margin-left: 475px;
+  }
 
   /* 	8/12 */
+  /* line 233, ../sass/grid.scss */
   .c1-8, .c2-9, .c3-10, .c4-11, .c5-12 {
-    width: 500px; }
+    width: 500px;
+  }
 
+  /* line 234, ../sass/grid.scss */
   .offset8 {
-    margin-left: 540px; }
+    margin-left: 540px;
+  }
 
   /* 	9/12 */
+  /* line 236, ../sass/grid.scss */
   .c1-9, .c2-10, .c3-11, .c4-12 {
-    width: 565px; }
+    width: 565px;
+  }
 
+  /* line 237, ../sass/grid.scss */
   .offset9 {
-    margin-left: 605px; }
+    margin-left: 605px;
+  }
 
   /* 	10/12 */
+  /* line 239, ../sass/grid.scss */
   .c1-10, .c2-11, .c3-12 {
-    width: 630px; }
+    width: 630px;
+  }
 
+  /* line 240, ../sass/grid.scss */
   .offset10 {
-    margin-left: 670px; }
+    margin-left: 670px;
+  }
 
   /* 	11/12 */
+  /* line 242, ../sass/grid.scss */
   .c1-11, .c2-12 {
-    width: 695px; }
+    width: 695px;
+  }
 
+  /* line 243, ../sass/grid.scss */
   .offset11 {
-    margin-left: 735px; }
+    margin-left: 735px;
+  }
 
   /* 	12/12 */
+  /* line 245, ../sass/grid.scss */
   .c1-12 {
-    width: 760px; }
+    width: 760px;
+  }
 
   /* 	Accounts for extra margin on first column
   	This value should change a negative margin of whatever your gutter width is. */
+  /* line 249, ../sass/grid.scss */
   .row {
-    margin-left: -20px; } }
+    margin-left: -20px;
+  }
+}
 /* 	Large Desktop Grid
 	Very wide columns for large monitors. */
 /* 	Single-column mobile
 	Get rid of widths and floats, go to fluid single column. */
 @media only screen and (max-width: 799px) {
+  /* line 345, ../sass/grid.scss */
   .grid {
     padding-left: 10px;
-    padding-right: 10px; }
+    padding-right: 10px;
+  }
 
+  /* line 361, ../sass/grid.scss */
   .grid,
   .c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10, .c11, .c12,
   .c1-2, .c2-3, .c3-4, .c4-5, .c5-6, .c6-7, .c7-8, .c8-9, .c9-10, .c10-11, .c11-12,
@@ -295,11 +411,16 @@
     display: block;
     float: none;
     margin-left: 0;
-    width: auto; }
+    width: auto;
+  }
 
+  /* line 367, ../sass/grid.scss */
   .row {
-    margin-left: 0; } }
+    margin-left: 0;
+  }
+}
 /* Zeroing out leftmost nested .unit margins */
+/* line 397, ../sass/grid.scss */
 [class*=c1] [class*=c1],
 [class*=c2] [class*=c2],
 [class*=c3] [class*=c3],
@@ -325,29 +446,38 @@
 [class*=c11-] .offset1:first-child,
 [class*=c12-] .offset1:first-child,
 .row .row {
-  margin-left: 0; }
+  margin-left: 0;
+}
 
 /* Full-width  */
+/* line 402, ../sass/grid.scss */
 .c1-12 {
   clear: both;
   display: block;
-  min-height: 1px; }
+  min-height: 1px;
+}
 
 /** grid utilities
  -------------------------------------------------- */
 /* Row offsetfix
 Uses variation of Nicolas Gallagher's Micro offsetfix.
 http://nicolasgallagher.com/micro-offsetfix-hack/ */
+/* line 414, ../sass/grid.scss */
 .row:before,
 .row:after {
   content: "";
-  display: table; }
+  display: table;
+}
 
+/* line 418, ../sass/grid.scss */
 .row:after {
-  clear: both; }
+  clear: both;
+}
 
+/* line 421, ../sass/grid.scss */
 .row {
   /* Just in case: make sure that rows offset outside floats. */
   clear: both;
   /* For IE 6/7 (trigger hasLayout) */
-  zoom: 1; }
+  zoom: 1;
+}
