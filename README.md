@@ -1,9 +1,13 @@
+# CSSGrid
+
+Version 2.1
+
 ### Purpose
 
 CSSGrid is an effort to use less classes to achieve a comprehensive and flexible grid. Each element in the grid only requires one class. That means no .first or .last classes anywhere.
 
-### Now using SASS
-The `grid.css` is compiled from a SASS file, whose variables can be edited on a per-breakpoint basis. Now you can have custom grid widths, grid gutters, and column margins on each media query breakpoint. SASS will do all the heavy lifting for you, just edit `grid.scss`, compile to `grid.css` and go! There's even an option to include an even larger breakpoint in CSSGrid, if your design requires it. Simply change the `$use-lg-breakpoint` to `true` and edit the appropriate variables.
+### Now using Sass and Compass
+The `grid.css` is compiled from a Sass file, whose variables can be edited on a per-breakpoint basis. Now you can have custom grid widths, grid gutters, and column margins on each media query breakpoint. Sass will do all the heavy lifting for you, just edit `grid.scss`, compile to `grid.css` and go! There's even an option to include an even larger breakpoint in CSSGrid, if your design requires it. Simply change the `$use-lg-breakpoint` to `true` and edit the appropriate variables.
 
 #### Variables
 Make sure the variables that you choose will work with the 12-column grid. For example, a 980px-wide 12-column grid with 20px margins may have an excess of pixels, depending on which column configuration you use. This is most noticeable in Safari when using the bookmarklet and is due to subpixel rounding issues. Use a grid tool, like [gridulator](http://gridulator.com), to help you tweak your grid columns and widths to get even numbers. A 976px-wide 12-column grid with 20px margins won't have excess pixels to worry about.
@@ -59,6 +63,12 @@ This new version of CSSGrid ships with a bookmarklet overlay to display your gri
 ### Weight
 
 CSSGrid means less junk in your HTML in favor of a little bit of extra CSS. Even then, CSSGrid weighs in at 8kb with comments and readable styles.
+
+### Dependencies
+
+In order to leverage the best of CSSGrid, your project will need to include the `base.css`, which is a compilation of the [HTML5 Boilerplate](http://html5boilerplate.com) CSS files, or a similar type of CSS reset.
+
+If you want to make customizations to the Sass files, you'll need [Compass](http://compass-style.org) installed first. From there, you can run `compass watch` in the command line from the same directory as the `config.rb` file. Changes to any Sass file will be compiled into the `css` directory, as expected.
 
 ### License
 
