@@ -367,44 +367,45 @@ $sm-column-width: (($sm-grid-inner-width - (($sm-col-margins * ($column-count - 
 	.row {
 		margin-left: 0;
 	}
-}
 
-/* Zeroing out leftmost nested .unit margins */
-[class*=c1] [class*=c1],
-[class*=c2] [class*=c2],
-[class*=c3] [class*=c3],
-[class*=c4] [class*=c4],
-[class*=c5] [class*=c5],
-[class*=c6] [class*=c6],
-[class*=c7] [class*=c7],
-[class*=c8] [class*=c8],
-[class*=c9] [class*=c9],
-[class*=c10] [class*=c10],
-[class*=c11] [class*=c11],
-[class*=c12] [class*=c12],
-[class*=c1-] .offset1:first-child,
-[class*=c2-] .offset1:first-child,
-[class*=c3-] .offset1:first-child,
-[class*=c4-] .offset1:first-child,
-[class*=c5-] .offset1:first-child,
-[class*=c6-] .offset1:first-child,
-[class*=c7-] .offset1:first-child,
-[class*=c8-] .offset1:first-child,
-[class*=c9-] .offset1:first-child,
-[class*=c10-] .offset1:first-child,
-[class*=c11-] .offset1:first-child,
-[class*=c12-] .offset1:first-child,
-.row .row {
-	margin-left: 0;
-}
 
-/* Full-width  */
-.c1-12 {
-	clear: both;
-	display: block;
-	min-height: 1px;
-}
+	/* Zeroing out leftmost nested .unit margins */
+	[class*=c1] [class*=c1],
+	[class*=c2] [class*=c2],
+	[class*=c3] [class*=c3],
+	[class*=c4] [class*=c4],
+	[class*=c5] [class*=c5],
+	[class*=c6] [class*=c6],
+	[class*=c7] [class*=c7],
+	[class*=c8] [class*=c8],
+	[class*=c9] [class*=c9],
+	[class*=c10] [class*=c10],
+	[class*=c11] [class*=c11],
+	[class*=c12] [class*=c12],
+	[class*=c1-] .offset1:first-child,
+	[class*=c2-] .offset1:first-child,
+	[class*=c3-] .offset1:first-child,
+	[class*=c4-] .offset1:first-child,
+	[class*=c5-] .offset1:first-child,
+	[class*=c6-] .offset1:first-child,
+	[class*=c7-] .offset1:first-child,
+	[class*=c8-] .offset1:first-child,
+	[class*=c9-] .offset1:first-child,
+	[class*=c10-] .offset1:first-child,
+	[class*=c11-] .offset1:first-child,
+	[class*=c12-] .offset1:first-child,
+	.row .row {
+		margin-left: 0;
+	}
+	
+	/* Full-width  */
+	.c1-12 {
+		clear: both;
+		display: block;
+		min-height: 1px;
+	}
 
+}
 /** grid utilities
  -------------------------------------------------- */
 /* Row offsetfix
