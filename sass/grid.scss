@@ -1,44 +1,47 @@
-/*	CSSGrid
- * 	https://github.com/crowdfavorite/css-grid
- * 	Version: 2.0.2
- *	License: http://opensource.org/licenses/mit-license.php  */
+/* CSSGrid
+ * https://github.com/crowdfavorite/css-grid
+ * Version: 2.0.2-dev
+ * License: http://opensource.org/licenses/mit-license.php  */
 
-// Variables (editable)
-$use-lg-breakpoint: false;
+/** Variables
+ --------------------------------------------------
+ To provide your own values for the variables below, simply re-define them in your Sass prior
+ to importing this partial. You can only customize variables that include the !default flag.
+ -------------------------------------------------- */
+$use-lg-breakpoint: false !default;
 
 // Large (large desktop) in px
-$lg-grid-inner-width: 1420px;
-$lg-grid-gutter: 0px;
-$lg-col-margins: 20px;
+$lg-grid-inner-width: 1420px !default;
+$lg-grid-gutter: 0px !default;
+$lg-col-margins: 20px !default;
 
 // Medium (tablet/desktop) in px
-$md-grid-inner-width: 1048px;
-$md-grid-gutter: 0px;
-$md-col-margins: 20px;
+$md-grid-inner-width: 1048px !default;
+$md-grid-gutter: 0px !default;
+$md-col-margins: 20px !default;
 
 // Small (mobile) in px
-$sm-grid-inner-width: 760px;
-$sm-grid-gutter: 20px;
-$sm-col-margins: 20px;
+$sm-grid-inner-width: 760px !default;
+$sm-grid-gutter: 20px !default;
+$sm-col-margins: 20px !default;
 
 // Smallest (block) in px
-$xs-grid-gutter: 10px;
+$xs-grid-gutter: 10px !default;
 
-// grid total widths
+// Grid total widths (not overridable)
 $lg-grid-total-width: $lg-grid-inner-width + (2 * $lg-grid-gutter);
 $md-grid-total-width: $md-grid-inner-width + (2 * $md-grid-gutter);
 $sm-grid-total-width: $sm-grid-inner-width + (2 * $sm-grid-gutter);
 
-// media queries
-$desktop-mq: '(min-width: #{$lg-grid-total-width + 30 })';
-$tablet-mq: '(min-width: #{$sm-grid-total-width}) and (max-width: #{$md-grid-total-width - 1})';
-$phone-mq: '(max-width: #{$sm-grid-total-width - 1})';
+// Media queries
+$desktop-mq: '(min-width: #{$lg-grid-total-width + 30 })' !default;
+$tablet-mq: '(min-width: #{$sm-grid-total-width}) and (max-width: #{$md-grid-total-width - 1})' !default;
+$phone-mq: '(max-width: #{$sm-grid-total-width - 1})' !default;
 
-
-// Variables (don't edit)
+// Column count (not overridable)
 $column-count: 12;
 
-// column widths
+// Column widths (not overridable)
 $lg-column-width: (($lg-grid-inner-width - (($lg-col-margins * ($column-count - 1)))) / $column-count);
 $md-column-width: (($md-grid-inner-width - (($md-col-margins * ($column-count - 1)))) / $column-count);
 $sm-column-width: (($sm-grid-inner-width - (($sm-col-margins * ($column-count - 1)))) / $column-count);
