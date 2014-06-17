@@ -33,10 +33,16 @@ $lg-grid-total-width: $lg-grid-inner-width + (2 * $lg-grid-gutter);
 $md-grid-total-width: $md-grid-inner-width + (2 * $md-grid-gutter);
 $sm-grid-total-width: $sm-grid-inner-width + (2 * $sm-grid-gutter);
 
+// Break Points
+$lg-bp-min-width: $lg-grid-total-width + 30 !default;
+$md-bp-max-width: $md-grid-total-width - 1 !default;
+$md-bp-min-width: $sm-grid-total-width !default;
+$sm-bp-max-width: $sm-grid-total-width - 1 !default;
+
 // Media queries
-$desktop-mq: '(min-width: #{$lg-grid-total-width + 30 })' !default;
-$tablet-mq: '(min-width: #{$sm-grid-total-width}) and (max-width: #{$md-grid-total-width - 1})' !default;
-$phone-mq: '(max-width: #{$sm-grid-total-width - 1})' !default;
+$desktop-mq: '(min-width: #{$lg-bp-min-width})' !default;
+$tablet-mq: '(min-width: #{$md-bp-min-width}) and (max-width: #{$md-bp-max-width})' !default;
+$phone-mq: '(max-width: #{$sm-bp-max-width})' !default;
 
 // Column count (not overridable)
 $column-count: 12;
