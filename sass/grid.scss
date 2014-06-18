@@ -39,11 +39,13 @@ $md-bp-max-width: $lg-grid-total-width - 1 !default;
 $md-bp-min-width: $md-grid-total-width !default;
 $sm-bp-max-width: $md-grid-total-width - 1 !default;
 $sm-bp-min-width: $sm-grid-total-width !default;
+$xs-bp-max-width: $sm-grid-total-width - 1 !default;
 
-// Media queries [@TODO: These should be renamed so phone is actually tablet etc]
-$desktop-mq: '(min-width: #{$lg-bp-min-width})' !default;
-$tablet-mq: '(min-width: #{$md-bp-min-width}) and (max-width: #{$md-bp-max-width})' !default;
-$phone-mq: '(max-width: #{$sm-bp-max-width})' !default;
+// Media queries
+$lg-mq: '(min-width: #{$lg-bp-min-width})' !default; // formerly "desktop-mq"
+$md-mq: '(min-width: #{$md-bp-min-width}) and (max-width: #{$md-bp-max-width})' !default; // formerly "tablet-mq"
+$sm-mq: '(min-width: #{$sm-bp-min-width}) and (max-width: #{$sm-bp-max-width})' !default; // formerly "phone-mq"
+$xs-mq: '(max-width: #{$xs-bp-max-width})' !default;
 
 // Column count (not overridable)
 $column-count: 12;
@@ -174,9 +176,9 @@ $sm-column-width: (($sm-grid-inner-width - (($sm-col-margins * ($column-count - 
 	}
 
 
-/* 	Medium Sized Grid
+/* 	Small Sized Grid
 	Tablet sized columns. */
-@media only screen and #{$tablet-mq} {
+@media only screen and #{$sm-mq} {
 	.grid {
 		@include gutters($sm-grid-gutter);
 		width: $sm-grid-inner-width;
@@ -266,7 +268,7 @@ $sm-column-width: (($sm-grid-inner-width - (($sm-col-margins * ($column-count - 
 	Very wide columns for large monitors. */
 
 @if $use-lg-breakpoint {
-	@media only screen and #{$desktop-mq} {
+	@media only screen and #{$lg-mq} {
 		.grid {
 			@include gutters($lg-grid-gutter);
 			width: $lg-grid-inner-width;
@@ -351,9 +353,10 @@ $sm-column-width: (($sm-grid-inner-width - (($sm-col-margins * ($column-count - 
 
 /* 	Single-column mobile
 	Get rid of widths and floats, go to fluid single column. */
-@media only screen and #{$phone-mq} {
+@media only screen and #{$xs-mq} {
 	.grid {
 		@include gutters($xs-grid-gutter);
+		width: auto; 
 	}
 
 	.grid,
