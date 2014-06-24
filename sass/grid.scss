@@ -34,7 +34,7 @@ $md-grid-total-width: $md-grid-inner-width + (2 * $md-grid-gutter);
 $sm-grid-total-width: $sm-grid-inner-width + (2 * $sm-grid-gutter);
 
 // Break Points
-$lg-bp-min-width: $lg-grid-total-width; 
+$lg-bp-min-width: $lg-grid-total-width;
 $md-bp-max-width: $lg-grid-total-width - 1 !default;
 $md-bp-min-width: $md-grid-total-width !default;
 $sm-bp-max-width: $md-grid-total-width - 1 !default;
@@ -43,7 +43,7 @@ $xs-bp-max-width: $sm-grid-total-width - 1 !default;
 
 // Media queries
 $lg-mq: '(min-width: #{$lg-bp-min-width})' !default; // formerly "desktop-mq"
-$md-mq: '(min-width: #{$md-bp-min-width}) and (max-width: #{$md-bp-max-width})' !default; // formerly "tablet-mq"
+$md-mq: if($use-lg-breakpoint, '(min-width: #{$md-bp-min-width}) and (max-width: #{$md-bp-max-width})', '(min-width: #{$md-bp-min-width})') !default; // formerly "tablet-mq"
 $sm-mq: '(min-width: #{$sm-bp-min-width}) and (max-width: #{$sm-bp-max-width})' !default; // formerly "phone-mq"
 $xs-mq: '(max-width: #{$xs-bp-max-width})' !default;
 
@@ -356,7 +356,7 @@ $sm-column-width: (($sm-grid-inner-width - (($sm-col-margins * ($column-count - 
 @media only screen and #{$xs-mq} {
 	.grid {
 		@include gutters($xs-grid-gutter);
-		width: auto; 
+		width: auto;
 	}
 
 	.grid,

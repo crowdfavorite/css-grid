@@ -1,7 +1,12 @@
-/*	CSSGrid
- * 	https://github.com/crowdfavorite/css-grid
- * 	Version: 2.0.2
- *	License: http://opensource.org/licenses/mit-license.php  */
+/* CSSGrid
+ * https://github.com/crowdfavorite/css-grid
+ * Version: 2.0.3
+ * License: http://opensource.org/licenses/mit-license.php  */
+/** Variables
+ --------------------------------------------------
+ To provide your own values for the variables below, simply re-define them in your Sass prior
+ to importing this partial. You can only customize variables that include the !default flag.
+ -------------------------------------------------- */
 /** mixins
  -------------------------------------------------- */
 /** grid foundation
@@ -141,7 +146,7 @@
 .row {
   margin-left: -20px; }
 
-/* 	Medium Sized Grid
+/* 	Small Sized Grid
 	Tablet sized columns. */
 @media only screen and (min-width: 800px) and (max-width: 1047px) {
   .grid {
@@ -277,7 +282,8 @@
 @media only screen and (max-width: 799px) {
   .grid {
     padding-left: 10px;
-    padding-right: 10px; }
+    padding-right: 10px;
+    width: auto; }
 
   .grid,
   .c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10, .c11, .c12,
