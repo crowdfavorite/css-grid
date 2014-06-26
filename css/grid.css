@@ -11,14 +11,14 @@
  -------------------------------------------------- */
 /** grid foundation
  -------------------------------------------------- */
-.cg-grid {
+.grid {
   margin: 0 auto; }
 
 /* fluid media */
-.cg-row img,
-.cg-row object,
-.cg-row embed,
-.cg-row video {
+.row img,
+.row object,
+.row embed,
+.row video {
   max-width: 100%; }
 
 /** mixins
@@ -30,7 +30,7 @@
  */
 /* 	Default Grid
 	Uses $cg-default-size-prefix and sets the defaults for browsers that don't support media queries. */
-.cg-grid {
+.grid {
   padding-left: 20px;
   padding-right: 20px;
   width: 760px; }
@@ -154,7 +154,7 @@
 
 /* 	Accounts for extra margin on first column
 	This value should change a negative margin of whatever your gutter width is. */
-.cg-row {
+.row {
   margin-left: -20px; }
 
 /* 	Small Sized Grid
@@ -162,7 +162,7 @@
 /* 	Medium Sized Grid
 	Desktop sized columns. */
 @media only screen and (min-width: 1048px) {
-  .cg-grid {
+  .grid {
     padding-left: 0px;
     padding-right: 0px;
     width: 1048px; }
@@ -286,19 +286,19 @@
 
   /* 	Accounts for extra margin on first column
   	This value should change a negative margin of whatever your gutter width is. */
-  .cg-row {
+  .row {
     margin-left: -20px; } }
 /* 	Large Desktop Grid
 	Very wide columns for large monitors. */
 /* 	Single-column mobile
 	Get rid of widths and floats, go to fluid single column. */
 @media only screen and (max-width: 799px) {
-  .cg-grid {
+  .grid {
     padding-left: 10px;
     padding-right: 10px;
     width: auto; }
 
-  .cg-grid,
+  .grid,
   .c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10, .c11, .c12,
   .c1-2, .c2-3, .c3-4, .c4-5, .c5-6, .c6-7, .c7-8, .c8-9, .c9-10, .c10-11, .c11-12,
   .c1-3, .c2-4, .c3-5, .c4-6, .c5-7, .c6-8, .c7-9, .c8-10, .c9-11, .c10-12,
@@ -316,7 +316,7 @@
     margin-left: 0;
     width: auto; }
 
-  .cg-row {
+  .row {
     margin-left: 0; } }
 /* Zeroing out leftmost nested .unit margins */
 [class*=c1] [class*=c1],
@@ -343,7 +343,7 @@
 [class*=c10-] .offset1:first-child,
 [class*=c11-] .offset1:first-child,
 [class*=c12-] .offset1:first-child,
-.cg-row .cg-row {
+.row .row {
   margin-left: 0; }
 
 /* Full-width  */
@@ -357,15 +357,15 @@
 /* Row offsetfix
 Uses variation of Nicolas Gallagher's Micro offsetfix.
 http://nicolasgallagher.com/micro-offsetfix-hack/ */
-.cg-row:before,
-.cg-row:after {
+.row:before,
+.row:after {
   content: "";
   display: table; }
 
-.cg-row:after {
+.row:after {
   clear: both; }
 
-.cg-row {
+.row {
   /* Just in case: make sure that rows offset outside floats. */
   clear: both;
   /* For IE 6/7 (trigger hasLayout) */
