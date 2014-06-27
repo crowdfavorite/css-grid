@@ -127,6 +127,7 @@ $_cg-default-size-map: map-get($_cg-size-map, $cg-default-size-prefix);
 @mixin cg-grid-width-for-size($size-prefix) {
 	$_map: map-get($_cg-size-map, $size-prefix);
 	$_width: if($cg-use-border-box, map-get($_map, grid-total-width), map-get($_map, grid-inner-width));
+	width: $_width;
 }
 
 @mixin cg-gutters($gutter) {
