@@ -24,7 +24,7 @@ $cg-md-col-margins: 20px !default;
 
 // Small (mobile) in px
 $cg-sm-grid-inner-width: 760px !default;
-$cg-sm-grid-gutter: 20px !default;
+$cg-sm-grid-gutter: 0px !default;
 $cg-sm-col-margins: 20px !default;
 
 // Smallest (block) in px
@@ -120,6 +120,15 @@ $_cg-default-size-map: map-get($_cg-size-map, $cg-default-size-prefix);
 
 /** mixins
  -------------------------------------------------- */
+
+/**
+ * Prints a width definition to be used by .grid.
+ */
+@mixin cg-grid-width-for-size($size-prefix) {
+	$_map: map-get($_cg-size-map, $size-prefix);
+	$_width: if($cg-use-border-box, map-get($_map, grid-total-width), map-get($_map, grid-inner-width));
+}
+
 @mixin cg-gutters($gutter) {
 	padding-left: $gutter;
 	padding-right: $gutter;
@@ -183,12 +192,7 @@ $_cg-default-size-map: map-get($_cg-size-map, $cg-default-size-prefix);
 		// --- The rest of the sizes use the routine below.
 		.grid {
 			@include cg-gutters(map-get($_map, grid-gutter));
-			// width: map-get($_map, grid-inner-width);
-			@if $cg-use-border-box {
-				width: map-get($_map, grid-inner-width) + (map-get($_map, grid-gutter) * 2);
-			} @else {
-				width: map-get($_map, grid-inner-width);
-			}
+			@include cg-grid-width-for-size($size-prefix);
 		}
 		.c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8,.c9,.c10,.c11,.c12,
 		.c1-2,.c2-3,.c3-4,.c4-5,.c5-6,.c6-7,.c7-8,.c8-9,.c9-10,.c10-11,.c11-12,

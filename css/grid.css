@@ -24,6 +24,9 @@
 /** mixins
  -------------------------------------------------- */
 /**
+ * Prints a width definition to be used by .grid.
+ */
+/**
  * Generates the grid CSS for a given size prefix.
  *
  * This should be called within the media query associated with the size prefix.
@@ -31,9 +34,8 @@
 /* 	Default Grid
 	Uses $cg-default-size-prefix and sets the defaults for browsers that don't support media queries. */
 .grid {
-  padding-left: 20px;
-  padding-right: 20px;
-  width: 760px; }
+  padding-left: 0px;
+  padding-right: 0px; }
 
 .c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10, .c11, .c12,
 .c1-2, .c2-3, .c3-4, .c4-5, .c5-6, .c6-7, .c7-8, .c8-9, .c9-10, .c10-11, .c11-12,
@@ -164,8 +166,7 @@
 @media only screen and (min-width: 1048px) {
   .grid {
     padding-left: 0px;
-    padding-right: 0px;
-    width: 1048px; }
+    padding-right: 0px; }
 
   .c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10, .c11, .c12,
   .c1-2, .c2-3, .c3-4, .c4-5, .c5-6, .c6-7, .c7-8, .c8-9, .c9-10, .c10-11, .c11-12,
@@ -292,7 +293,7 @@
 	Very wide columns for large monitors. */
 /* 	Single-column mobile
 	Get rid of widths and floats, go to fluid single column. */
-@media only screen and (max-width: 799px) {
+@media only screen and (max-width: 759px) {
   .grid {
     padding-left: 10px;
     padding-right: 10px;
