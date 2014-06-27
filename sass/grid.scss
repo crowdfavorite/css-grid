@@ -9,6 +9,7 @@
  to importing this partial. You can only customize variables that include the !default flag.
  -------------------------------------------------- */
 $cg-use-lg-breakpoint: false !default;
+$cg-use-border-box: false !default;
 $cg-default-size-prefix: 'sm' !default; // formerly md
 
 // Large (large desktop) in px
@@ -52,9 +53,16 @@ $cg-xs-mq: '(max-width: #{$cg-xs-bp-max-width})' !default;
 $cg-column-count: 12;
 
 // Column widths (not overridable)
+// If we're using box-sizing:border-box, then we need to manually add the padding (gutters) to the inner-width
+// value to get an accurate column width.
 $cg-lg-column-width: (($cg-lg-grid-inner-width - (($cg-lg-col-margins * ($cg-column-count - 1)))) / $cg-column-count);
 $cg-md-column-width: (($cg-md-grid-inner-width - (($cg-md-col-margins * ($cg-column-count - 1)))) / $cg-column-count);
 $cg-sm-column-width: (($cg-sm-grid-inner-width - (($cg-sm-col-margins * ($cg-column-count - 1)))) / $cg-column-count);
+@if $cg-use-border-box {
+	$cg-lg-column-width: ((($cg-lg-grid-inner-width + ($cg-lg-grid-gutter * 2)) - (($cg-lg-col-margins * ($cg-column-count - 1)))) / $cg-column-count);
+	$cg-md-column-width: ((($cg-md-grid-inner-width + ($cg-md-grid-gutter * 2)) - (($cg-md-col-margins * ($cg-column-count - 1)))) / $cg-column-count);
+	$cg-sm-column-width: ((($cg-sm-grid-inner-width + ($cg-sm-grid-gutter * 2)) - (($cg-sm-col-margins * ($cg-column-count - 1)))) / $cg-column-count);
+}
 
 /** move vars to a map for dynamic usage
  -------------------------------------------------- */
@@ -117,7 +125,7 @@ $_cg-default-size-map: map-get($_cg-size-map, $cg-default-size-prefix);
 	padding-right: $gutter;
 }
 
-@mixin cg-width($col-width, $margin-width, $multiplier: 1) {
+@mixin cg-cols-width($col-width, $margin-width, $multiplier: 1) {
 	width: (($col-width * $multiplier) + (($multiplier - 1) * $margin-width));
 }
 
@@ -175,7 +183,12 @@ $_cg-default-size-map: map-get($_cg-size-map, $cg-default-size-prefix);
 		// --- The rest of the sizes use the routine below.
 		.grid {
 			@include cg-gutters(map-get($_map, grid-gutter));
-			width: map-get($_map, grid-inner-width);
+			// width: map-get($_map, grid-inner-width);
+			@if $cg-use-border-box {
+				width: map-get($_map, grid-inner-width) + (map-get($_map, grid-gutter) * 2);
+			} @else {
+				width: map-get($_map, grid-inner-width);
+			}
 		}
 		.c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8,.c9,.c10,.c11,.c12,
 		.c1-2,.c2-3,.c3-4,.c4-5,.c5-6,.c6-7,.c7-8,.c8-9,.c9-10,.c10-11,.c11-12,
@@ -199,7 +212,7 @@ $_cg-default-size-map: map-get($_cg-size-map, $cg-default-size-prefix);
 			clear: none;
 		}
 		/* 	1/12 */
-		.c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8,.c9,.c10,.c11,.c12 { @include cg-width(map-get($_map, column-width), map-get($_map, col-margins)); }
+		.c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8,.c9,.c10,.c11,.c12 { @include cg-cols-width(map-get($_map, column-width), map-get($_map, col-margins)); }
 		.offset1 { @include cg-offset(map-get($_map, column-width), map-get($_map, col-margins)); }
 		[class*=c1-],
 		[class*=c2-],
@@ -218,37 +231,37 @@ $_cg-default-size-map: map-get($_cg-size-map, $cg-default-size-prefix);
 			}
 		}
 		/* 	2/12 */
-		.c1-2,.c2-3,.c3-4,.c4-5,.c5-6,.c6-7,.c7-8,.c8-9,.c9-10,.c10-11,.c11-12 { @include cg-width(map-get($_map, column-width), map-get($_map, col-margins), 2); }
+		.c1-2,.c2-3,.c3-4,.c4-5,.c5-6,.c6-7,.c7-8,.c8-9,.c9-10,.c10-11,.c11-12 { @include cg-cols-width(map-get($_map, column-width), map-get($_map, col-margins), 2); }
 		.offset2 { @include cg-offset(map-get($_map, column-width), map-get($_map, col-margins), 2); }
 		/* 	3/12 */
-		.c1-3,.c2-4,.c3-5,.c4-6,.c5-7,.c6-8,.c7-9,.c8-10,.c9-11,.c10-12 { @include cg-width(map-get($_map, column-width), map-get($_map, col-margins), 3); }
+		.c1-3,.c2-4,.c3-5,.c4-6,.c5-7,.c6-8,.c7-9,.c8-10,.c9-11,.c10-12 { @include cg-cols-width(map-get($_map, column-width), map-get($_map, col-margins), 3); }
 		.offset3 { @include cg-offset(map-get($_map, column-width), map-get($_map, col-margins), 3); }
 		/* 	4/12 */
-		.c1-4,.c2-5,.c3-6,.c4-7,.c5-8,.c6-9,.c7-10,.c8-11,.c9-12 { @include cg-width(map-get($_map, column-width), map-get($_map, col-margins), 4); }
+		.c1-4,.c2-5,.c3-6,.c4-7,.c5-8,.c6-9,.c7-10,.c8-11,.c9-12 { @include cg-cols-width(map-get($_map, column-width), map-get($_map, col-margins), 4); }
 		.offset4 { @include cg-offset(map-get($_map, column-width), map-get($_map, col-margins), 4); }
 		/* 	5/12 */
-		.c1-5,.c2-6,.c3-7,.c4-8,.c5-9,.c6-10,.c7-11,.c8-12 { @include cg-width(map-get($_map, column-width), map-get($_map, col-margins), 5); }
+		.c1-5,.c2-6,.c3-7,.c4-8,.c5-9,.c6-10,.c7-11,.c8-12 { @include cg-cols-width(map-get($_map, column-width), map-get($_map, col-margins), 5); }
 		.offset5 { @include cg-offset(map-get($_map, column-width), map-get($_map, col-margins), 5); }
 		/* 	6/12 */
-		.c1-6,.c2-7,.c3-8,.c4-9,.c5-10,.c6-11,.c7-12 { @include cg-width(map-get($_map, column-width), map-get($_map, col-margins), 6); }
+		.c1-6,.c2-7,.c3-8,.c4-9,.c5-10,.c6-11,.c7-12 { @include cg-cols-width(map-get($_map, column-width), map-get($_map, col-margins), 6); }
 		.offset6 { @include cg-offset(map-get($_map, column-width), map-get($_map, col-margins), 6); }
 		/* 	7/12 */
-		.c1-7,.c2-8,.c3-9,.c4-10,.c5-11,.c6-12 { @include cg-width(map-get($_map, column-width), map-get($_map, col-margins), 7); }
+		.c1-7,.c2-8,.c3-9,.c4-10,.c5-11,.c6-12 { @include cg-cols-width(map-get($_map, column-width), map-get($_map, col-margins), 7); }
 		.offset7 { @include cg-offset(map-get($_map, column-width), map-get($_map, col-margins), 7); }
 		/* 	8/12 */
-		.c1-8,.c2-9,.c3-10,.c4-11,.c5-12 { @include cg-width(map-get($_map, column-width), map-get($_map, col-margins), 8); }
+		.c1-8,.c2-9,.c3-10,.c4-11,.c5-12 { @include cg-cols-width(map-get($_map, column-width), map-get($_map, col-margins), 8); }
 		.offset8 { @include cg-offset(map-get($_map, column-width), map-get($_map, col-margins), 8); }
 		/* 	9/12 */
-		.c1-9,.c2-10,.c3-11,.c4-12 { @include cg-width(map-get($_map, column-width), map-get($_map, col-margins), 9); }
+		.c1-9,.c2-10,.c3-11,.c4-12 { @include cg-cols-width(map-get($_map, column-width), map-get($_map, col-margins), 9); }
 		.offset9 { @include cg-offset(map-get($_map, column-width), map-get($_map, col-margins), 9); }
 		/* 	10/12 */
-		.c1-10,.c2-11,.c3-12 { @include cg-width(map-get($_map, column-width), map-get($_map, col-margins), 10); }
+		.c1-10,.c2-11,.c3-12 { @include cg-cols-width(map-get($_map, column-width), map-get($_map, col-margins), 10); }
 		.offset10 { @include cg-offset(map-get($_map, column-width), map-get($_map, col-margins), 10); }
 		/* 	11/12 */
-		.c1-11,.c2-12 { @include cg-width(map-get($_map, column-width), map-get($_map, col-margins), 11); }
+		.c1-11,.c2-12 { @include cg-cols-width(map-get($_map, column-width), map-get($_map, col-margins), 11); }
 		.offset11 { @include cg-offset(map-get($_map, column-width), map-get($_map, col-margins), 11); }
 		/* 	12/12 */
-		.c1-12 { @include cg-width(map-get($_map, column-width), map-get($_map, col-margins), 12); }
+		.c1-12 { @include cg-cols-width(map-get($_map, column-width), map-get($_map, col-margins), 12); }
 
 		/* 	Accounts for extra margin on first column
 			This value should change a negative margin of whatever your gutter width is. */
