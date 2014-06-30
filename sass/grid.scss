@@ -59,9 +59,9 @@ $cg-lg-column-width: (($cg-lg-grid-inner-width - (($cg-lg-col-margins * ($cg-col
 $cg-md-column-width: (($cg-md-grid-inner-width - (($cg-md-col-margins * ($cg-column-count - 1)))) / $cg-column-count);
 $cg-sm-column-width: (($cg-sm-grid-inner-width - (($cg-sm-col-margins * ($cg-column-count - 1)))) / $cg-column-count);
 @if $cg-use-border-box {
-	$cg-lg-column-width: ((($cg-lg-grid-inner-width + ($cg-lg-grid-gutter * 2)) - (($cg-lg-col-margins * ($cg-column-count - 1)))) / $cg-column-count);
-	$cg-md-column-width: ((($cg-md-grid-inner-width + ($cg-md-grid-gutter * 2)) - (($cg-md-col-margins * ($cg-column-count - 1)))) / $cg-column-count);
-	$cg-sm-column-width: ((($cg-sm-grid-inner-width + ($cg-sm-grid-gutter * 2)) - (($cg-sm-col-margins * ($cg-column-count - 1)))) / $cg-column-count);
+	$cg-lg-column-width: ((($cg-lg-grid-inner-width + ($cg-lg-grid-gutter * 2)) - (($cg-lg-col-margins * ($cg-column-count - 1)))) / $cg-column-count) !global;
+	$cg-md-column-width: ((($cg-md-grid-inner-width + ($cg-md-grid-gutter * 2)) - (($cg-md-col-margins * ($cg-column-count - 1)))) / $cg-column-count) !global;
+	$cg-sm-column-width: ((($cg-sm-grid-inner-width + ($cg-sm-grid-gutter * 2)) - (($cg-sm-col-margins * ($cg-column-count - 1)))) / $cg-column-count) !global;
 }
 
 /** move vars to a map for dynamic usage
